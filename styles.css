@@ -57,7 +57,7 @@ body {
 .stage-box {
     position: absolute;
     top: 0;
-    left: 100px;
+    left: 105px;
     width: 180px;
     height: 35px;
     background-color: var(--primary);
@@ -139,37 +139,38 @@ body {
 /* --- MESA 5 (Frente Izquierda) --- */
 .m5 { 
     top: 65px; 
-    left: 70px; 
+    left: 95px; 
     width: 45px; 
     height: 25px; 
 }
+/* --- Sillas de MESA 5 (Centradas bajo M5) --- */
 /* Costado Corto Izquierdo (2 sillas) */
-.s1 { top: 60px; left: 45px; }
-.s2 { top: 80px; left: 45px; }
+.s1 { top: 60px; left: 70px; }
+.s2 { top: 80px; left: 70px; }
 /* Costado Corto Derecho (2 sillas) */
-.s3 { top: 60px; left: 120px; }
-.s4 { top: 80px; left: 120px; }
+.s3 { top: 60px; left: 145px; }
+.s4 { top: 80px; left: 145px; }
 /* Parte de Abajo (2 sillas viendo al frente) */
-.s5 { top: 95px; left: 73px; }
-.s6 { top: 95px; left: 93px; }
-
+.s5 { top: 95px; left: 98px; }
+.s6 { top: 95px; left: 118px; }
 
 /* --- MESA 4 (Frente Derecha) --- */
 .m4 { 
     top: 65px; 
-    left: 175px; 
+    left: 195px; 
     width: 45px; 
     height: 25px; 
 }
+/* --- Sillas de MESA 4 (Centradas bajo M4) --- */
 /* Costado Corto Izquierdo (2 sillas) */
-.s7 { top: 60px; left: 150px; }
-.s8 { top: 80px; left: 150px; }
+.s7 { top: 60px; left: 170px; }
+.s8 { top: 80px; left: 170px; }
 /* Costado Corto Derecho (2 sillas) */
-.s9 { top: 60px; left: 225px; }
-.s10 { top: 80px; left: 225px; }
+.s9 { top: 60px; left: 245px; }
+.s10 { top: 80px; left: 245px; }
 /* Parte de Abajo (2 sillas viendo al frente) */
-.s11 { top: 95px; left: 178px; }
-.s12 { top: 95px; left: 198px; }
+.s11 { top: 95px; left: 198px; }
+.s12 { top: 95px; left: 218px; }
 
 /* COMPONENTES DE COMPRA INFERIOR */
 .checkout-bar {
