@@ -141,16 +141,6 @@ body {
 .s47 { top: 185px; left: 28px; }
 .s48 { top: 205px; left: 28px; }
 
-.m5 { top: 65px; left: 105px; }
-.s1 { top: 66px; left: 82px; }
-.s2 { top: 66px; left: 145px; }
-
-.m6 { top: 135px; left: 110px; }
-.s52 { top: 110px; left: 114px; }
-.s53 { top: 139px; left: 86px; }
-.s55 { top: 168px; left: 114px; }
-.s57 { top: 139px; left: 142px; }
-
 .m7 { top: 230px; left: 110px; }
 .s66 { top: 208px; left: 110px; }
 .s67 { top: 208px; left: 128px; }
@@ -162,6 +152,37 @@ body {
 .s95 { top: 368px; left: 158px; }
 .s92 { top: 415px; left: 140px; }
 .s93 { top: 415px; left: 158px; }
+
+/* ==========================================
+   ZONA 1: BLOQUE FRONTAL CENTRAL (CORREGIDO)
+   ========================================== */
+
+/* --- MESA 5 (Mesa horizontal alta izquierda) --- */
+.m5 { top: 60px; left: 85px; }
+.s1 { top: 38px; left: 83px; }  /* Arriba izquierda */
+.s2 { top: 38px; left: 103px; } /* Arriba derecha */
+.s3 { top: 61px; left: 62px; }  /* Lateral izquierdo */
+.s4 { top: 83px; left: 93px; }  /* Abajo */
+
+/* --- MESA 4 (Mesa horizontal alta derecha) --- */
+.m4 { top: 60px; left: 165px; width: 50px; } /* Un poco más ancha por tener más sillas */
+.s5 { top: 61px; left: 142px; } /* Lateral izquierdo (Silla 5) */
+.s6 { top: 38px; left: 165px; } /* Arriba (Silla 6) */
+.s7 { top: 38px; left: 185px; } /* Arriba (Silla 7) */
+.s8 { top: 38px; left: 205px; } /* Arriba (Silla 8) */
+.s9 { top: 83px; left: 165px; } /* Abajo (Silla 9) */
+.s10 { top: 83px; left: 185px; }/* Abajo (Silla 10) */
+.s11 { top: 61px; left: 220px; }/* Lateral derecho (Silla 11) */
+.s12 { top: 38px; left: 225px; }/* Esquina superior derecha extrema */
+
+/* --- MESA 6 (El Rombo Central) --- */
+.m6 { top: 140px; left: 120px; }
+.s52 { top: 115px; left: 124px; } /* Punta Norte */
+.s57 { top: 144px; left: 153px; } /* Punta Este */
+.s55 { top: 173px; left: 124px; } /* Punta Sur */
+.s53 { top: 144px; left: 95px; }  /* Punta Oeste */
+.s54 { top: 165px; left: 102px; } /* Diagonal Suroeste */
+.s56 { top: 123px; left: 145px; } /* Diagonal Noreste */
 
 /* COMPONENTES DE COMPRA INFERIOR */
 .checkout-bar {
