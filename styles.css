@@ -57,7 +57,7 @@ body {
 .stage-box {
     position: absolute;
     top: 0;
-    left: 105px;
+    left: 75px;
     width: 180px;
     height: 35px;
     background-color: var(--primary);
