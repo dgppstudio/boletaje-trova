@@ -172,6 +172,27 @@ body {
 .s11 { top: 95px; left: 198px; }
 .s12 { top: 95px; left: 218px; }
 
+/* ==========================================
+   ZONA 1: CENTRADO DEL ROMBO CENTRAL (M6)
+   ========================================== */
+
+/* Se coloca justo abajo y al centro del espacio entre M5 y M4 */
+.m6 { 
+    top: 155px; 
+    left: 155px; /* Centrado perfecto en el eje del escenario */
+    width: 26px; 
+    height: 26px; 
+    transform: rotate(45deg); 
+}
+
+/* Sillas posicionadas alrededor de las caras del diamante */
+.s52 { top: 125px; left: 158px; } /* Punta Norte */
+.s53 { top: 155px; left: 125px; } /* Punta Oeste */
+.s54 { top: 180px; left: 135px; } /* Diagonal Suroeste */
+.s55 { top: 190px; left: 158px; } /* Punta Sur */
+.s56 { top: 135px; left: 183px; } /* Diagonal Noreste */
+.s57 { top: 155px; left: 192px; } /* Punta Este */
+
 /* COMPONENTES DE COMPRA INFERIOR */
 .checkout-bar {
     background: white;
