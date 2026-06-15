@@ -148,11 +148,11 @@ body {
 .s1 { top: 60px; left: 70px; }
 .s2 { top: 80px; left: 70px; }
 /* Costado Corto Derecho (2 sillas) */
-.s3 { top: 60px; left: 145px; }
-.s4 { top: 80px; left: 145px; }
+.s3 { top: 95px; left: 98px; }
+.s4 { top: 95px; left: 118px; }
 /* Parte de Abajo (2 sillas viendo al frente) */
-.s5 { top: 95px; left: 98px; }
-.s6 { top: 95px; left: 118px; }
+.s5 { top: 80px; left: 145px; }
+.s6 { top: 60px; left: 145px; }
 
 /* --- MESA 4 (Frente Derecha) --- */
 .m4 { 
