@@ -3,109 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDEA Almacenes — Ingeniería Estructural</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Distribución Planta Baja</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-brand">IDEA STUDIO</div>
-        <div class="menu-trigger">
-            <span class="line"></span>
-            <span class="line"></span>
-        </div>
-    </nav>
+    <div class="canvas-mapa">
+        <div class="stage-box">ESCENARIO</div>
 
-    <header class="hero-section">
-        <h1 class="main-title">Ingeniería para<br>Espacios Masivos</h1>
-        <p class="hero-subtitle">
-            Diseñamos, fabricamos e instalamos sistemas de almacenamiento de alta resistencia. Precisión técnica y optimización de metros cuadrados.
-        </p>
-    </header>
+        <div class="mesa h m5">M5</div>
+        <div class="silla s1" data-id="1">1</div>
+        <div class="silla s2" data-id="2">2</div>
+        <div class="silla s3" data-id="3">3</div>
+        <div class="silla s4" data-id="4">4</div>
+        <div class="silla s5" data-id="5">5</div>
+        <div class="silla s6" data-id="6">6</div>
 
-    <section class="gallery-showcase">
-        <div class="carousel-track" id="galleryTrack">
-            <div class="slide">
-                <img src="https://picsum.photos/id/1069/1200/800" alt="Racks de Carga Pesada">
-                <div class="slide-meta">
-                    <span>01 / RACKS DE CARGA</span>
-                    <h3>Sistemas Industriales Pesados</h3>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="https://picsum.photos/id/1070/1200/800" alt="Entrepisos Modulares">
-                <div class="slide-meta">
-                    <span>02 / ENTREPISOS</span>
-                    <h3>Multiplicación de Superficie Útil</h3>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="https://picsum.photos/id/1071/1200/800" alt="Sistemas SMW">
-                <div class="slide-meta">
-                    <span>03 / SISTEMAS SMW</span>
-                    <h3>Automatización Mecánica Modular</h3>
-                </div>
-            </div>
-        </div>
-    </section>
+        <div class="mesa h m4">M4</div>
+        <div class="silla s7" data-id="7">7</div>
+        <div class="silla s8" data-id="8">8</div>
+        <div class="silla s9" data-id="9">9</div>
+        <div class="silla s10" data-id="10">10</div>
+        <div class="silla s11" data-id="11">11</div>
+        <div class="silla s12" data-id="12">12</div>
 
-    <main class="content-body">
-        <h2 class="section-heading">Lo que aportamos al almacén</h2>
-        <p class="body-lead">
-            Creamos soluciones robustas para cada proyecto logístico, fusionando la fuerza del acero certificado con el cálculo estructural exacto.
-        </p>
+        <div class="mesa rombo m6"><span>M6</span></div>
+        <div class="silla s52" data-id="52">52</div>
+        <div class="silla s53" data-id="53">53</div>
+        <div class="silla s54" data-id="54">54</div>
+        <div class="silla s55" data-id="55">55</div>
+        <div class="silla s56" data-id="56">56</div>
+        <div class="silla s57" data-id="57">57</div>
 
-        <div class="specs-grid">
-            <div class="spec-row">
-                <span class="label">Capacidades</span>
-                <span class="value">Hasta 3,500 kg por nivel</span>
-            </div>
-            <div class="spec-row">
-                <span class="label">Certificaciones</span>
-                <span class="value">Normativa AISI / RMI Compliance</span>
-            </div>
-            <div class="spec-row">
-                <span class="label">Acabados</span>
-                <span class="value">Pintura electrostática horneada</span>
-            </div>
-        </div>
-    </main>
 
-    <footer class="studio-footer">
-        <div class="footer-cta">
-            <h2>Vamos a optimizar<br>tu espacio</h2>
-            <a href="https://wa.me/TUNUMERO" class="talk-link">Cotizar proyecto →</a>
-        </div>
-        
-        <div class="footer-links">
-            <div class="links-col">
-                <span class="col-title">Soluciones</span>
-                <a href="#">Racks Pesados</a>
-                <a href="#">Entrepisos</a>
-                <a href="#">Estructuras SMW</a>
-            </div>
-            <div class="links-col">
-                <span class="col-title">Contacto</span>
-                <a href="#">WhatsApp</a>
-                <a href="#">Email Corporativo</a>
-                <a href="#">Ubicación Planta</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 IDEA ALMACENES. Soluciones de Acero.</p>
-        </div>
-    </footer>
+        <div class="mesa h m7">M7</div>
+        <div class="silla s66" data-id="66">66</div>
+        <div class="silla s67" data-id="67">67</div>
+        <div class="silla s68" data-id="68">68</div>
+        <div class="silla s69" data-id="69">69</div>
 
-    <script>
-        // Desplazamiento automático suave para el carrusel inmersivo
-        const track = document.getElementById('galleryTrack');
-        let index = 0;
-        setInterval(() => {
-            index = (index + 1) % 3;
-            track.style.transform = `translateX(-${index * 100}vw)`;
-        }, 4000);
-    </script>
-</body>
-</html>
+        <div class="mesa h m8">M8</div>
+        <div class="silla s70" data-id="70">70</div>
+        <div class="silla s71" data-id="71">71</div>
+        <div class="silla s72" data-id="72">72</div>
+        <div class="silla s73" data-id="73">73</div>
+
+        <div class="mesa h m9">M9</div>
+        <div class="silla s74" data-id="74">74</div>
+        <div class="silla s75" data-id="75">75</div>
+        <div class="silla s76" data-id="76">76</div>
+        <div class="silla s77" data-id="77">77</div>
+
+
+        <div class="mesa h m3">M3</div>
+        <div class="silla s92" data-id="92">92</div>
+        <div class="silla s93" data-id="93">93</div>
+        <div class="silla s94" data-id="94">94</div>
+        <div class="silla s95" data-id="95">95</div>
+
+        <div class="mesa h m2">M2</div>
+        <div class="silla s88" data-id="88">88</div>
+        <div class="silla s89" data-id="89">89</div>
+        <div class="silla s90" data-id="90">90</div>
+        <div class="silla s91" data-id="91">9
