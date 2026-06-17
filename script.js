@@ -1,28 +1,45 @@
-// ==========================================
-// LÓGICA DE SELECCIÓN DE ASIENTOS (script.js)
-// ==========================================
-
 document.addEventListener('DOMContentLoaded', () => {
     const sillas = document.querySelectorAll('.silla');
+    const resumenTxt = document.getElementById('checkout-resumen');
+    
+    const PRECIO_ASIENTO = 250; // Cambia aquí el costo por lugar si es diferente
+    let asientosSeleccionados = [];
+
+    // Función para actualizar la barra inferior de costos
+    function actualizarCheckout() {
+        if (asientosSeleccionados.length === 0) {
+            resumenTxt.innerText = "Asientos: Ninguno | Total: $0";
+        } else {
+            const total = asientosSeleccionados.length * PRECIO_ASIENTO;
+            // Ordenamos los números elegidos para que se vea limpio (ej: 13, 14, 15)
+            const listaIds = [...asientosSeleccionados].sort((a, b) => a - b).join(', ');
+            resumenTxt.innerText = `Asientos: [${listaIds}] | Total: $${total}`;
+        }
+    }
 
     sillas.forEach(silla => {
-        // Ignorar clics en los asientos que simulan estar vendidos u obstruidos
+        // Ignorar por completo los asientos vendidos
         if (silla.classList.contains('vendido')) return;
+
+        // Forzamos el estado verde inicial en los disponibles
+        silla.classList.add('disponible');
 
         silla.addEventListener('click', () => {
             const asientoId = silla.getAttribute('data-id');
 
-            // Si ya está seleccionado, lo deseleccionamos (vuelve a verde)
-            if (silla.style.backgroundColor === 'rgb(0, 0, 51)' || silla.style.backgroundColor === '#000033') {
-                silla.style.backgroundColor = '#248a3d'; // Verde libre
-                silla.style.color = '#ffffff';
-                console.log(`Asiento ${asientoId} deseleccionado.`);
+            if (silla.classList.contains('seleccionada')) {
+                // Deseleccionar
+                silla.classList.remove('seleccionada');
+                silla.classList.add('disponible');
+                asientosSeleccionados = asientosSeleccionados.filter(id => id !== asientoId);
             } else {
-                // Se selecciona el asiento (cambia al color azul oscuro "Tu Lugar")
-                silla.style.backgroundColor = '#000033'; 
-                silla.style.color = '#ffffff';
-                console.log(`Asiento ${asientoId} seleccionado.`);
+                // Seleccionar
+                silla.classList.remove('disponible');
+                silla.classList.add('seleccionada');
+                asientosSeleccionados.push(asientoId);
             }
+
+            actualizarCheckout();
         });
     });
 });
