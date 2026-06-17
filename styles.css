@@ -50,17 +50,6 @@ body {
     background-color: #ffffff;
 }
 
-/* Colores de los estados de las sillas al interactuar */
-.silla.seleccionada {
-    background-color: #000033 !important; /* Azul oscuro ("Tu Lugar") */
-    color: #ffffff !important;
-}
-
-.silla.disponible {
-    background-color: #248a3d !important; /* Verde ("Libre") */
-    color: #ffffff !important;
-}
-
 /* ==========================================
    ESTILOS BASE DE LOS ELEMENTOS
    ========================================== */
@@ -77,12 +66,17 @@ body {
     z-index: 10;
 }
 
+/* ==========================================
+   ACTUALIZACIÓN DE COLORES (ESTILO CORREGIDO)
+   ========================================== */
+
+/* Estado Base: Disponible */
 .silla {
     position: absolute;
     width: 18px;
     height: 18px;
-    background-color: #248a3d;
-    color: #ffffff;
+    background-color: #64748B; /* Gris Pizarra Disponible */
+    color: #ffffff; /* Texto blanco para excelente contraste */
     font-size: 9px;
     font-weight: bold;
     display: flex;
@@ -90,6 +84,28 @@ body {
     justify-content: center;
     border-radius: 3px;
     z-index: 20;
+    cursor: pointer;
+    user-select: none; 
+    -webkit-user-select: none;
+}
+
+/* Estado: Tu Lugar (Seleccionado) */
+.silla.seleccionada {
+    background-color: #10B981 !important; /* Verde Esmeralda Vibrante */
+    color: #ffffff !important;
+}
+
+/* Forzar estado disponible en la iteración */
+.silla.disponible {
+    background-color: #64748B !important;
+    color: #ffffff !important;
+}
+
+/* Estado: Vendido u Obstruido */
+.silla.vendido {
+    background-color: #E2E8F0 !important; /* Gris Claro Opaco */
+    color: #94A3B8 !important; /* Texto gris sutil para que no resalte */
+    cursor: not-allowed;
 }
 
 /* Modificadores de forma */
