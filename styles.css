@@ -132,36 +132,44 @@ body {
 /* COORDINADAS LÓGICAS INTERNAS */
 .r2-box { position: absolute; top: 65px; left: 5px; width: 15px; height: 160px; background: #64748b; color: white; font-size: 8px; display: flex; align-items: center; justify-content: center; border-radius: 2px; }
 
-.s41 { top: 65px; left: 28px; }
-.s42 { top: 85px; left: 28px; }
-.s43 { top: 105px; left: 28px; }
-.s44 { top: 125px; left: 28px; }
-.s45 { top: 145px; left: 28px; }
-.s46 { top: 165px; left: 28px; }
-.s47 { top: 185px; left: 28px; }
-.s48 { top: 205px; left: 28px; }
+/* ==========================================
+   ZONA 1: PRIMERA FILA (M5 Y M4) SIN ESPALDAS
+   ========================================== */
 
-.m5 { top: 65px; left: 105px; }
-.s1 { top: 66px; left: 82px; }
-.s2 { top: 66px; left: 145px; }
+/* --- MESA 5 (Frente Izquierda) --- */
+.m5 { 
+    top: 65px; 
+    left: 70px; 
+    width: 45px; 
+    height: 25px; 
+}
+/* Costado Corto Izquierdo (2 sillas) */
+.s1 { top: 60px; left: 45px; }
+.s2 { top: 80px; left: 45px; }
+/* Costado Corto Derecho (2 sillas) */
+.s3 { top: 60px; left: 120px; }
+.s4 { top: 80px; left: 120px; }
+/* Parte de Abajo (2 sillas viendo al frente) */
+.s5 { top: 95px; left: 73px; }
+.s6 { top: 95px; left: 93px; }
 
-.m6 { top: 135px; left: 110px; }
-.s52 { top: 110px; left: 114px; }
-.s53 { top: 139px; left: 86px; }
-.s55 { top: 168px; left: 114px; }
-.s57 { top: 139px; left: 142px; }
 
-.m7 { top: 230px; left: 110px; }
-.s66 { top: 208px; left: 110px; }
-.s67 { top: 208px; left: 128px; }
-.s68 { top: 255px; left: 110px; }
-.s69 { top: 255px; left: 128px; }
-
-.m3 { top: 390px; left: 140px; }
-.s94 { top: 368px; left: 140px; }
-.s95 { top: 368px; left: 158px; }
-.s92 { top: 415px; left: 140px; }
-.s93 { top: 415px; left: 158px; }
+/* --- MESA 4 (Frente Derecha) --- */
+.m4 { 
+    top: 65px; 
+    left: 175px; 
+    width: 45px; 
+    height: 25px; 
+}
+/* Costado Corto Izquierdo (2 sillas) */
+.s7 { top: 60px; left: 150px; }
+.s8 { top: 80px; left: 150px; }
+/* Costado Corto Derecho (2 sillas) */
+.s9 { top: 60px; left: 225px; }
+.s10 { top: 80px; left: 225px; }
+/* Parte de Abajo (2 sillas viendo al frente) */
+.s11 { top: 95px; left: 178px; }
+.s12 { top: 95px; left: 198px; }
 
 /* COMPONENTES DE COMPRA INFERIOR */
 .checkout-bar {
