@@ -165,18 +165,18 @@ body {
 }
 
 /* NO (Noroeste): Superior Izquierda (52) */
-.s52 { top: 132px; left: 88px; }
+.s52 { top: 132px; left: 89px; }
 
 /* SO (Suroeste): Inferior Izquierda (53 y 54) */
-.s53 { top: 165px; left: 70px; }
-.s54 { top: 190px; left: 85px; }
+.s53 { top: 162px; left: 80px; }
+.s54 { top: 183px; left: 95px; }
 
 /* SE (Sureste): Inferior Derecha (55 y 56) */
-.s55 { top: 205px; left: 104px; }
-.s56 { top: 190px; left: 123px; }
+.s55 { top: 183px; left: 122px; }
+.s56 { top: 162px; left: 137px; }
 
 /* NE (Noreste): Superior Derecha (57) */
-.s57 { top: 145px; left: 128px; }
+.s57 { top: 132px; left: 128px; }
 
 /* ==========================================
    PASILLOS CENTRALES
