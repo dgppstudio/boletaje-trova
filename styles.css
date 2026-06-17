@@ -237,7 +237,7 @@ body {
    ========================================== */
 .mbis1, .mbis2, .mbis3, .mbis4, .mbis5, .mr1, .mb1, .mb2,
 [class^="silla s13"], [class^="silla s14"], [class^="silla s15"], [class^="silla s16"], [class^="silla s17"],
-[class^="silla s18"], [class^="silla s19"], [class^="silla s2"], [class^="silla s3"] {
+[class^="silla s18"], [class^="silla s19"] {
     top: 480px;
     left: 280px;
 }
