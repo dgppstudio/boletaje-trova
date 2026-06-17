@@ -113,7 +113,7 @@ body {
 .stage-box {
     position: absolute;
     top: 0;
-    left: 75px; /* Calculado para centrar sus 180px en el canvas de 380px */
+    left: 90px; /* Calculado para centrar sus 180px en el canvas de 380px */
     width: 180px;
     height: 35px;
     background-color: #000033; /* Color oscuro para el escenario */
@@ -133,32 +133,32 @@ body {
    ========================================== */
 
 /* --- MESA 5 (Frente Izquierda) - Sillas 2 y 3 ajustadas --- */
-.m5 { top: 65px; left: 95px; }
+.m5 { top: 65px; left: 110px; }
 /* Lado Corto Izquierdo (Sillas 1 y 2 en su lugar exacto) */
-.s1 { top: 60px; left: 70px; }
-.s2 { top: 80px; left: 70px; } /* Ajustada para alinear con s1 */
+.s1 { top: 60px; left: 85px; }
+.s2 { top: 80px; left: 85px; } /* Ajustada para alinear con s1 */
 /* Parte Inferior (3 y 4 ajustadas simétricamente) */
-.s3 { top: 95px; left: 95px; } /* Ajustada hacia la izquierda bajo la mesa */
-.s4 { top: 95px; left: 115px; }
+.s3 { top: 95px; left: 110px; } /* Ajustada hacia la izquierda bajo la mesa */
+.s4 { top: 95px; left: 135px; }
 /* Lado Corto Derecho (6 arriba, 5 abajo) */
-.s6 { top: 60px; left: 145px; }
-.s5 { top: 80px; left: 145px; }
+.s6 { top: 60px; left: 160px; }
+.s5 { top: 80px; left: 160px; }
 
 
 /* --- MESA 4 (Mismo ajuste simétrico de s9 y s10) --- */
-.m4 { top: 65px; left: 195px; }
-.s7 { top: 60px; left: 170px; }
-.s8 { top: 80px; left: 170px; }
-.s9 { top: 95px; left: 195px; } /* Ajustada hacia la izquierda */
-.s10 { top: 95px; left: 215px; }
-.s12 { top: 60px; left: 245px; }
-.s11 { top: 80px; left: 245px; }
+.m4 { top: 65px; left: 205px; }
+.s7 { top: 60px; left: 182px; }
+.s8 { top: 80px; left: 182px; }
+.s9 { top: 95px; left: 205px; } /* Ajustada hacia la izquierda */
+.s10 { top: 95px; left: 230px; }
+.s12 { top: 60px; left: 255px; }
+.s11 { top: 80px; left: 255px; }
 
 
 /* --- MESA 6 (Rombo Central) - TODAS LAS SILLAS REUBICADAS --- */
 .m6 { 
-    top: 155px; 
-    left: 100px; 
+    top: 150px; 
+    left: 105px; 
     width: 26px; 
     height: 26px; 
     transform: rotate(45deg); 
@@ -181,15 +181,15 @@ body {
 /* ==========================================
    PASILLOS CENTRALES
    ========================================== */
-.m7 { top: 255px; left: 100px; }
+.m7 { top: 253px; left: 90px; }
 .s66 { top: 232px; left: 95px; }   .s67 { top: 232px; left: 115px; }
 .s68 { top: 280px; left: 95px; }   .s69 { top: 280px; left: 115px; }
 
-.m8 { top: 345px; left: 100px; }
+.m8 { top: 343px; left: 90px; }
 .s70 { top: 322px; left: 95px; }   .s71 { top: 322px; left: 115px; }
 .s72 { top: 370px; left: 95px; }   .s73 { top: 370px; left: 115px; }
 
-.m9 { top: 435px; left: 100px; }
+.m9 { top: 433px; left: 90px; }
 .s74 { top: 412px; left: 95px; }   .s75 { top: 412px; left: 115px; }
 .s76 { top: 460px; left: 95px; }   .s77 { top: 460px; left: 115px; }
 
