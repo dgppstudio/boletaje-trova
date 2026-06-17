@@ -349,6 +349,47 @@ body {
 .s17 { top: 92px; left: 290px; }
 
 /* ==========================================
+   MESAS BIS: MESA BIS2 (DEBAJO DE BIS1)
+   ========================================== */
+
+/* Rombo Bis2 alineado con Bis1 */
+.mbis2 { 
+    top: 155px; 
+    left: 310px; 
+    width: 26px; 
+    height: 26px; 
+    transform: rotate(45deg); 
+}
+
+/* Sillas 18 al 22: Sentido horario */
+.s18 { top: 135px; left: 290px; } /* Arriba Izquierda */
+.s19 { top: 135px; left: 335px; } /* Arriba Derecha */
+.s20 { top: 158px; left: 350px; } /* Esquina Derecha */
+.s21 { top: 182px; left: 335px; } /* Abajo Derecha */
+.s22 { top: 182px; left: 290px; } /* Abajo Izquierda */
+
+
+/* ==========================================
+   MESAS BIS: MESA BIS3 (DEBAJO DE BIS2)
+   ========================================== */
+
+/* Rombo Bis3 alineado con la columna Bis */
+.mbis3 { 
+    top: 245px; 
+    left: 310px; 
+    width: 26px; 
+    height: 26px; 
+    transform: rotate(45deg); 
+}
+
+/* Sillas 23 al 27: Sentido horario */
+.s23 { top: 225px; left: 290px; } /* Arriba Izquierda */
+.s24 { top: 225px; left: 335px; } /* Arriba Derecha */
+.s25 { top: 248px; left: 350px; } /* Esquina Derecha */
+.s26 { top: 272px; left: 335px; } /* Abajo Derecha */
+.s27 { top: 272px; left: 290px; } /* Abajo Izquierda */
+
+/* ==========================================
    BARRA DE DESCRIPCIÓN Y LEYENDAS (FIJA ABAJO)
    ========================================== */
 .checkout-bar {
