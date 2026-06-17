@@ -233,30 +233,30 @@ body {
 .s49 { top: 145px; left: 55px; }
 
 /* ==========================================
-   BARRAS LATERALES: BARRA R3 (AJUSTE CON MURO)
+   BARRAS LATERALES: BARRA R3 (CORRECCIÓN INTEGRAL)
    ========================================== */
 
-/* Ajustamos las dimensiones para que quepan las 4 sillas de la izquierda */
+/* Mesa R3 idéntica en ancho a R2 (25px) y bajada 10px */
 .mr3 { 
-    top: 215px; 
+    top: 225px; 
     left: 25px; 
-    width: 45px; 
+    width: 25px; 
     height: 95px; 
 }
 
-/* LADO SUPERIOR (Izquierda a Derecha) */
-.s58 { top: 192px; left: 22px; }
-.s59 { top: 192px; left: 45px; }
+/* LADO SUPERIOR (Invertidas y alineadas con R2) */
+.s59 { top: 202px; left: 18px; } /* Izquierda (Usa el left de s42) */
+.s58 { top: 202px; left: 42px; } /* Derecha (Usa el left de s41) */
 
-/* LADO IZQUIERDO (Arriba hacia Abajo) */
-.s60 { top: 215px; left: 2px; }
-.s61 { top: 235px; left: 2px; }
-.s62 { top: 255px; left: 2px; }
-.s63 { top: 275px; left: 2px; }
+/* LADO IZQUIERDO (Distribuidas proporcionalmente) */
+.s60 { top: 225px; left: 2px; }
+.s61 { top: 250px; left: 2px; }
+.s62 { top: 275px; left: 2px; }
+.s63 { top: 300px; left: 2px; }
 
-/* LADO INFERIOR (Izquierda a Derecha) */
-.s64 { top: 315px; left: 22px; }
-.s65 { top: 315px; left: 45px; }
+/* LADO INFERIOR (Alineadas con R2) */
+.s64 { top: 325px; left: 18px; } /* Izquierda (Usa el left de s47) */
+.s65 { top: 325px; left: 42px; } /* Derecha (Usa el left de s48) */
 
 /* ==========================================
    ZONA DE ESPERA PROVISIONAL AL FONDO
