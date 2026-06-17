@@ -44,8 +44,8 @@ body {
 /* Tu Lienzo de dibujo exacto */
 .canvas-mapa {
     position: relative;
-    width: 380px;
-    height: 520px; /* Reducido un poco para que conviva bien con la barra de abajo */
+    width: 580px; /* Lo subimos de 380px a 580px para darle pista al scroll derecho */
+    height: 520px; 
     margin: 0 auto;
     background-color: #ffffff;
 }
@@ -321,10 +321,10 @@ body {
 .s37 { top: 225px; left: 202px; }
 
 /* ==========================================
-   MESAS BIS: MESA BIS1 (AL LADO DE M4)
+   MESAS BIS: FILA HORIZONTAL (BIS1 -> BIS2 -> BIS3)
    ========================================== */
 
-/* Rombo Bis1 alineado horizontalmente con M4 */
+/* --- MESA BIS1 (Base) --- */
 .mbis1 { 
     top: 65px; 
     left: 310px; 
@@ -332,62 +332,41 @@ body {
     height: 26px; 
     transform: rotate(45deg); 
 }
-
-/* Silla 13: Arriba Izquierda */
 .s13 { top: 45px; left: 290px; }
-
-/* Silla 14: Arriba Derecha */
 .s14 { top: 45px; left: 335px; }
-
-/* Silla 15: Esquina de la Derecha */
 .s15 { top: 68px; left: 350px; }
-
-/* Silla 16: Abajo Derecha */
 .s16 { top: 92px; left: 335px; }
-
-/* Silla 17: Abajo Izquierda */
 .s17 { top: 92px; left: 290px; }
 
-/* ==========================================
-   MESAS BIS: MESA BIS2 (DEBAJO DE BIS1)
-   ========================================== */
-
-/* Rombo Bis2 alineado con Bis1 */
+/* --- MESA BIS2 (Al lado derecho de Bis1) --- */
 .mbis2 { 
-    top: 155px; 
-    left: 310px; 
+    top: 65px; /* Misma altura */
+    left: 405px; /* 310px + 95px */
     width: 26px; 
     height: 26px; 
     transform: rotate(45deg); 
 }
+/* Sillas 18 al 22 en sentido horario */
+.s18 { top: 45px; left: 385px; } /* Arriba Izquierda */
+.s19 { top: 45px; left: 430px; } /* Arriba Derecha */
+.s20 { top: 68px; left: 445px; } /* Esquina Derecha */
+.s21 { top: 92px; left: 430px; } /* Abajo Derecha */
+.s22 { top: 92px; left: 385px; } /* Abajo Izquierda */
 
-/* Sillas 18 al 22: Sentido horario */
-.s18 { top: 135px; left: 290px; } /* Arriba Izquierda */
-.s19 { top: 135px; left: 335px; } /* Arriba Derecha */
-.s20 { top: 158px; left: 350px; } /* Esquina Derecha */
-.s21 { top: 182px; left: 335px; } /* Abajo Derecha */
-.s22 { top: 182px; left: 290px; } /* Abajo Izquierda */
-
-
-/* ==========================================
-   MESAS BIS: MESA BIS3 (DEBAJO DE BIS2)
-   ========================================== */
-
-/* Rombo Bis3 alineado con la columna Bis */
+/* --- MESA BIS3 (Al lado derecho de Bis2) --- */
 .mbis3 { 
-    top: 245px; 
-    left: 310px; 
+    top: 65px; /* Misma altura */
+    left: 500px; /* 405px + 95px */
     width: 26px; 
     height: 26px; 
     transform: rotate(45deg); 
 }
-
-/* Sillas 23 al 27: Sentido horario */
-.s23 { top: 225px; left: 290px; } /* Arriba Izquierda */
-.s24 { top: 225px; left: 335px; } /* Arriba Derecha */
-.s25 { top: 248px; left: 350px; } /* Esquina Derecha */
-.s26 { top: 272px; left: 335px; } /* Abajo Derecha */
-.s27 { top: 272px; left: 290px; } /* Abajo Izquierda */
+/* Sillas 23 al 27 en sentido horario */
+.s23 { top: 45px; left: 480px; } /* Arriba Izquierda */
+.s24 { top: 45px; left: 525px; } /* Arriba Derecha */
+.s25 { top: 68px; left: 540px; } /* Esquina Derecha */
+.s26 { top: 92px; left: 525px; } /* Abajo Derecha */
+.s27 { top: 92px; left: 480px; } /* Abajo Izquierda */
 
 /* ==========================================
    BARRA DE DESCRIPCIÓN Y LEYENDAS (FIJA ABAJO)
