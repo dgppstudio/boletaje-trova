@@ -1,8 +1,8 @@
 /* ==========================================
-   CONFIGURACIÓN GENERAL (MOCKUP MÓVIL)
+   CONFIGURACIÓN GENERAL DE LA APP
    ========================================== */
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #0f172a; /* Fondo exterior oscuro */
     margin: 0;
     padding: 10px;
@@ -10,125 +10,119 @@ body {
     justify-content: center;
 }
 
+/* El contenedor blanco simulando la pantalla del celular */
 .phone-wrapper {
     width: 100%;
-    max-width: 430px;
-    background-color: #ffffff; /* Cuerpo de la app blanco */
-    border-radius: 30px;
+    max-width: 410px;
+    background-color: #ffffff;
+    border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     display: flex;
     flex-direction: column;
-    height: 94vh;
+    height: 92vh;
 }
 
+/* Encabezado azul de la aplicación */
 .app-header {
     background-color: #000033;
     color: white;
-    padding: 12px;
+    padding: 14px;
     text-align: center;
 }
-.app-header h1 { font-family: 'Urbanist', sans-serif; margin: 0; font-size: 16px; letter-spacing: 1px; }
-.app-header p { margin: 3px 0 0 0; font-size: 11px; color: #94a3b8; }
+.app-header h1 { margin: 0; font-size: 16px; letter-spacing: 1px; text-transform: uppercase; }
+.app-header p { margin: 4px 0 0 0; font-size: 11px; color: #94a3b8; }
 
+/* Área contenedora que permite el scroll de tu mapa */
 .map-area {
     flex-grow: 1;
-    overflow: auto; /* Permite el scroll horizontal en tu teléfono */
-    background-color: #f8fafc; /* Fondo claro para ver contrastes */
-    padding: 10px;
+    overflow: auto; /* Mantiene tu scroll horizontal y vertical libre */
+    background-color: #ffffff;
+    padding: 15px;
 }
 
-/* Lienzo amplio y estructurado para distribución limpia */
+/* Tu Lienzo de dibujo exacto */
 .canvas-mapa {
-    width: 380px;
-    height: 600px;
     position: relative;
+    width: 380px;
+    height: 520px; /* Reducido un poco para que conviva bien con la barra de abajo */
     margin: 0 auto;
-    background-color: #ffffff; /* Fondo del plano claro como el papel */
+    background-color: #ffffff;
 }
 
 /* ==========================================
-   MUROS ESTRUCTURALES REALES
-   ========================================== */
-.muro-izq {
-    position: absolute;
-    top: 48px;
-    left: 0;
-    width: 75px;
-    height: 4px;
-    background-color: #cbd5e1; /* Línea de pared superior izquierda */
-}
-.muro-separador-r2 {
-    position: absolute;
-    top: 48px;
-    left: 55px;
-    width: 4px;
-    height: 185px;
-    background-color: #cbd5e1; /* Pared vertical del cuarto cerrado R-2 */
-}
-
-/* ==========================================
-   ESTILOS BASE: MESAS Y SILLAS
+   ESTILOS BASE DE LOS ELEMENTOS
    ========================================== */
 .mesa {
     position: absolute;
-    background-color: #1e293b; /* Color oscuro para resaltar la madera */
-    color: white;
-    font-family: Arial, sans-serif;
-    font-size: 9px;
+    background-color: #1e293b;
+    color: #ffffff;
+    font-size: 10px;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 3px;
-    z-index: 2;
+    border-radius: 4px;
+    z-index: 10;
 }
 
 .silla {
     position: absolute;
     width: 18px;
     height: 18px;
-    background-color: #008744; /* Verde disponible de tu croquis */
-    color: white;
-    font-family: Arial, sans-serif;
-    font-size: 8px;
+    background-color: #248a3d;
+    color: #ffffff;
+    font-size: 9px;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 3px;
-    cursor: pointer;
-    z-index: 3;
+    z-index: 20;
 }
 
-/* Tipos de Mesa según orientación */
-.mesa.h { width: 35px; height: 20px; }
-.mesa.v { width: 20px; height: 35px; }
+/* Modificadores de forma */
+.mesa.h { width: 45px; height: 25px; }
+.mesa.v { width: 25px; height: 45px; }
 .mesa.rombo { width: 26px; height: 26px; transform: rotate(45deg); }
 .mesa.rombo span { transform: rotate(-45deg); }
 
-/* Letrero del Escenario centrado */
+/* LÍNEAS DE PAREDES DE LA IZQUIERDA */
+.muro-izq {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 75px;
+    height: 4px;
+    background-color: #cbd5e1;
+}
+.muro-separador-r2 {
+    position: absolute;
+    top: 48px;
+    left: 70px;
+    width: 4px;
+    height: 185px;
+    background-color: #cbd5e1;
+}
+
+/* ==========================================
+   ESCENARIO Y BLOQUE FRONTAL (TU ALINEACIÓN)
+   ========================================== */
 .stage-box {
     position: absolute;
-    top: 0;
-    left: 100px;
+    top: 5px;
+    left: 75px;
     width: 180px;
     height: 35px;
     background-color: #000033;
-    color: #fff;
-    font-family: 'Urbanist', sans-serif;
-    font-size: 13px;
+    color: #ffffff;
+    font-size: 12px;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    letter-spacing: 2px;
 }
-
-/* ==========================================
-   ZONA 1: COORDENADAS BLOQUE FRONTAL
-   ========================================== */
 
 /* --- MESA 5 --- */
 .m5 { top: 65px; left: 95px; }
@@ -145,87 +139,107 @@ body {
 .s8 { top: 80px; left: 170px; }
 .s9 { top: 60px; left: 245px; }
 .s10 { top: 80px; left: 245px; }
-.s11 { top: 105px; left: 198px; } /* Bajadas un poco más para dar aire */
-.s12 { top: 105px; left: 218px; }
+.s11 { top: 95px; left: 198px; }
+.s12 { top: 95px; left: 218px; }
 
-/* --- MESA 6 (Rombo Central - Movido a Left 100px) --- */
-.m6 { 
-    top: 165px; 
-    left: 100px; /* Movida a tu coordenada exacta */
+/* --- MESA 6 (Rombo) --- */
+.m6 { top: 165px; left: 100px; }
+.s52 { top: 135px; left: 104px; }
+.s53 { top: 168px; left: 70px; }
+.s54 { top: 195px; left: 80px; }
+.s55 { top: 205px; left: 104px; }
+.s56 { top: 145px; left: 128px; }
+.s57 { top: 168px; left: 140px; }
+
+/* ==========================================
+   PASILLOS CENTRALES
+   ========================================== */
+.m7 { top: 255px; left: 100px; }
+.s66 { top: 232px; left: 95px; }   .s67 { top: 232px; left: 115px; }
+.s68 { top: 280px; left: 95px; }   .s69 { top: 280px; left: 115px; }
+
+.m8 { top: 345px; left: 100px; }
+.s70 { top: 322px; left: 95px; }   .s71 { top: 322px; left: 115px; }
+.s72 { top: 370px; left: 95px; }   .s73 { top: 370px; left: 115px; }
+
+.m9 { top: 435px; left: 100px; }
+.s74 { top: 412px; left: 95px; }   .s75 { top: 412px; left: 115px; }
+.s76 { top: 460px; left: 95px; }   .s77 { top: 460px; left: 115px; }
+
+.m3 { top: 295px; left: 195px; }
+.s94 { top: 272px; left: 190px; }  .s95 { top: 272px; left: 210px; }
+.s92 { top: 320px; left: 190px; }  .s93 { top: 320px; left: 210px; }
+
+.m2 { top: 385px; left: 195px; }
+.s90 { top: 362px; left: 190px; }  .s91 { top: 362px; left: 210px; }
+.s88 { top: 410px; left: 190px; }  .s89 { top: 410px; left: 210px; }
+
+/* ==========================================
+   BARRAS LATERALES IZQUIERDAS
+   ========================================== */
+.mr2 { top: 60px; left: 10px; width: 30px !important; height: 165px !important; }
+.s41 { top: 62px;  left: 45px; }
+.s42 { top: 82px;  left: 45px; }
+.s43 { top: 102px; left: 45px; }
+.s44 { top: 122px; left: 45px; }
+.s45 { top: 142px; left: 45px; }
+.s46 { top: 162px; left: 45px; }
+.s47 { top: 182px; left: 45px; }
+.s48 { top: 202px; left: 45px; }
+.s49 { top: 82px;  left: 78px; }
+.s50 { top: 122px; left: 78px; }
+.s51 { top: 162px; left: 78px; }
+
+.mr3 { top: 250px; left: 10px; width: 30px !important; height: 165px !important; }
+.s58 { top: 252px; left: 45px; }
+.s59 { top: 272px; left: 45px; }
+.s60 { top: 292px; left: 45px; }
+.s61 { top: 312px; left: 45px; }
+.s62 { top: 332px; left: 45px; }
+.s63 { top: 352px; left: 45px; }
+.s64 { top: 372px; left: 45px; }
+.s65 { top: 392px; left: 45px; }
+
+/* ==========================================
+   ZONA DE ESPERA PROVISIONAL AL FONDO
+   ========================================== */
+.mbis1, .mbis2, .mbis3, .mbis4, .mbis5, .mr1, .mb1, .mb2,
+[class^="silla s13"], [class^="silla s14"], [class^="silla s15"], [class^="silla s16"], [class^="silla s17"],
+[class^="silla s18"], [class^="silla s19"], [class^="silla s2"], [class^="silla s3"] {
+    top: 480px;
+    left: 280px;
 }
 
-/* Sillas recalculadas simétricamente desde el nuevo eje (100px) */
-.s52 { top: 135px; left: 104px; } /* Punta Norte */
-.s53 { top: 168px; left: 70px;  } /* Punta Oeste */
-.s54 { top: 195px; left: 80px;  } /* Diagonal Suroeste */
-.s55 { top: 205px; left: 104px; } /* Punta Sur */
-.s56 { top: 145px; left: 128px; } /* Diagonal Noreste */
-.s57 { top: 168px; left: 140px; } /* Punta Este */
-
 /* ==========================================
-   PASILLO IZQUIERDO: MESAS 7, 8 Y 9 (EJE LEFT 100px)
-   ========================================== */
-
-/* --- MESA 7 (Justo abajo de la Mesa 6) --- */
-.m7 { top: 255px; left: 100px; }
-/* 2 Sillas arriba viendo al escenario */
-.s66 { top: 232px; left: 95px; }
-.s67 { top: 232px; left: 115px; }
-/* 2 Sillas abajo */
-.s68 { top: 280px; left: 95px; }
-.s69 { top: 280px; left: 115px; }
-
-/* --- MESA 8 (Siguiente hacia abajo) --- */
-.m8 { top: 345px; left: 100px; }
-/* 2 Sillas arriba */
-.s70 { top: 322px; left: 95px; }
-.s71 { top: 322px; left: 115px; }
-/* 2 Sillas abajo */
-.s72 { top: 370px; left: 95px; }
-.s73 { top: 370px; left: 115px; }
-
-/* --- MESA 9 (Al final de este pasillo) --- */
-.m9 { top: 435px; left: 100px; }
-/* 2 Sillas arriba */
-.s74 { top: 412px; left: 95px; }
-.s75 { top: 412px; left: 115px; }
-/* 2 Sillas abajo */
-.s76 { top: 460px; left: 95px; }
-.s77 { top: 460px; left: 115px; }
-
-/* ==========================================
-   PASILLO DERECHO: MESAS 3 Y 2 (EJE LEFT 195px)
-   ========================================== */
-
-/* --- MESA 3 (Frente a las escaleras / Pasillo Derecho) --- */
-.m3 { top: 295px; left: 195px; }
-/* 2 Sillas arriba */
-.s94 { top: 272px; left: 190px; }
-.s95 { top: 272px; left: 210px; }
-/* 2 Sillas abajo */
-.s92 { top: 320px; left: 190px; }
-.s93 { top: 320px; left: 210px; }
-
-/* --- MESA 2 (Abajo de la Mesa 3) --- */
-.m2 { top: 385px; left: 195px; }
-/* 2 Sillas arriba */
-.s90 { top: 362px; left: 190px; }
-.s91 { top: 362px; left: 210px; }
-/* 2 Sillas abajo */
-.s88 { top: 410px; left: 190px; }
-.s89 { top: 410px; left: 210px; }
-
-/* ==========================================
-   COMPONENTES DE COMPRA INFERIOR (FIJO)
+   BARRA DE DESCRIPCIÓN Y LEYENDAS (FIJA ABAJO)
    ========================================== */
 .checkout-bar {
-    background: white;
+    background-color: #ffffff;
     border-top: 1px solid #e2e8f0;
-    padding: 12px;
+    padding: 14px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
-.legend-bar { display: flex; justify-content: space-around; font-size: 10px; color: #64748b; }
-.legend-i { display: flex; align-items: center; gap: 4px; }
-.legend-c { width: 10px; height: 10px; border-radius: 2px; }
+
+.legend-bar {
+    display: flex;
+    justify-content: space-around;
+    font-size: 11px;
+    color: #64748b;
+}
+
+.legend-i {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend-c {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+.legend-c.libre { background-color: #248a3d; }
+.legend-c.tuyol { background-color: #000033; }
+.legend-c.vendido { background-color: #cbd5e1; }
