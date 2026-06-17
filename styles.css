@@ -349,16 +349,6 @@ body {
 .s17 { top: 92px; left: 290px; }
 
 /* ==========================================
-   ZONA DE ESPERA PROVISIONAL AL FONDO
-   ========================================== */
-.mbis1, .mbis2, .mbis3, .mbis4, .mbis5,
-[class^="silla s13"], [class^="silla s14"], [class^="silla s15"], [class^="silla s16"], [class^="silla s17"],
-[class^="silla s18"], [class^="silla s19"] {
-    top: 480px;
-    left: 280px;
-}
-
-/* ==========================================
    BARRA DE DESCRIPCIÓN Y LEYENDAS (FIJA ABAJO)
    ========================================== */
 .checkout-bar {
