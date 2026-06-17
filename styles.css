@@ -226,6 +226,28 @@ body {
 .s76 { top: 460px; left: 95px; }
 .s77 { top: 460px; left: 115px; }
 
+/* ==========================================
+   PASILLO DERECHO: MESAS 3 Y 2 (EJE LEFT 195px)
+   ========================================== */
+
+/* --- MESA 3 (Frente a las escaleras / Pasillo Derecho) --- */
+.m3 { top: 295px; left: 195px; }
+/* 2 Sillas arriba */
+.s94 { top: 272px; left: 190px; }
+.s95 { top: 272px; left: 210px; }
+/* 2 Sillas abajo */
+.s92 { top: 320px; left: 190px; }
+.s93 { top: 320px; left: 210px; }
+
+/* --- MESA 2 (Abajo de la Mesa 3) --- */
+.m2 { top: 385px; left: 195px; }
+/* 2 Sillas arriba */
+.s90 { top: 362px; left: 190px; }
+.s91 { top: 362px; left: 210px; }
+/* 2 Sillas abajo */
+.s88 { top: 410px; left: 190px; }
+.s89 { top: 410px; left: 210px; }
+
 /* COMPONENTES DE COMPRA INFERIOR */
 .checkout-bar {
     background: white;
