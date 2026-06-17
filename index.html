@@ -3,201 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserva de Asientos - PLANTA BAJA</title>
-    <link rel="icon" type="image/png" href="tu-icono.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght=700&family=Lato:wght=400;700&display=swap" rel="stylesheet">
+    <title>Selecciona tu Asiento</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <div class="phone-wrapper">
-        <header class="app-header">
-            <h1>SELECCIONA TU ASIENTO</h1>
+        <div class="app-header">
+            <h1>Selecciona tu Asiento</h1>
             <p>Planta Baja - 96 Lugares Disponibles</p>
-        </header>
+        </div>
 
         <div class="map-area">
-            <div class="canvas-plano">
-                
-                <div class="stage-box">ESCENARIO</div>
+            <div class="canvas-mapa">
                 <div class="muro-izq"></div>
                 <div class="muro-separador-r2"></div>
+                <div class="stage-box">ESCENARIO</div>
 
                 <div class="mesa h m5">M5</div>
-                <div class="silla s1" data-id="1">1</div>
-                <div class="silla s2" data-id="2">2</div>
-                <div class="silla s3" data-id="3">3</div>
-                <div class="silla s4" data-id="4">4</div>
-                <div class="silla s5" data-id="5">5</div>
-                <div class="silla s6" data-id="6">6</div>
-                
-                <div class="mesa h m4">M4</div>
-                <div class="silla s7" data-id="7">7</div>
-                <div class="silla s8" data-id="8">8</div>
-                <div class="silla s9" data-id="9">9</div>
-                <div class="silla s10" data-id="10">10</div>
-                <div class="silla s11" data-id="11">11</div>
-                <div class="silla s12" data-id="12">12</div>
-                
-                <div class="mesa rombo m6"><span>M6</span></div>
-                <div class="silla s52" data-id="52">52</div>
-                <div class="silla s53" data-id="53">53</div>
-                <div class="silla s54" data-id="54">54</div>
-                <div class="silla s55" data-id="55">55</div>
-                <div class="silla s56" data-id="56">56</div>
-                <div class="silla s57" data-id="57">57</div>
-                
-                
-                <div class="mesa h m7">M7</div>
-                <div class="silla s66" data-id="66">66</div>
-                <div class="silla s67" data-id="67">67</div>
-                <div class="silla s68" data-id="68">68</div>
-                <div class="silla s69" data-id="69">69</div>
-                
-                <div class="mesa h m8">M8</div>
-                <div class="silla s70" data-id="70">70</div>
-                <div class="silla s71" data-id="71">71</div>
-                <div class="silla s72" data-id="72">72</div>
-                <div class="silla s73" data-id="73">73</div>
-                
-                <div class="mesa h m9">M9</div>
-                <div class="silla s74" data-id="74">74</div>
-                <div class="silla s75" data-id="75">75</div>
-                <div class="silla s76" data-id="76">76</div>
-                <div class="silla s77" data-id="77">77</div>
-                
-                
-                <div class="mesa h m3">M3</div>
-                <div class="silla s92" data-id="92">92</div>
-                <div class="silla s93" data-id="93">93</div>
-                <div class="silla s94" data-id="94">94</div>
-                <div class="silla s95" data-id="95">95</div>
-                
-                <div class="mesa h m2">M2</div>
-                <div class="silla s88" data-id="88">88</div>
-                <div class="silla s89" data-id="89">89</div>
-                <div class="silla s90" data-id="90">90</div>
-                <div class="silla s91" data-id="91">91</div>
-                
-                
-                <div class="mesa v mr2">R2</div>
-                <div class="silla s41" data-id="41">41</div>
-                <div class="silla s42" data-id="42">42</div>
-                <div class="silla s43" data-id="43">43</div>
-                <div class="silla s44" data-id="44">44</div>
-                <div class="silla s45" data-id="45">45</div>
-                <div class="silla s46" data-id="46">46</div>
-                <div class="silla s47" data-id="47">47</div>
-                <div class="silla s48" data-id="48">48</div>
-                <div class="silla s49" data-id="49">49</div>
-                <div class="silla s50" data-id="50">50</div>
-                <div class="silla s51" data-id="51">51</div>
-                
-                <div class="mesa v mr3">R3</div>
-                <div class="silla s58" data-id="58">58</div>
-                <div class="silla s59" data-id="59">59</div>
-                <div class="silla s60" data-id="60">60</div>
-                <div class="silla s61" data-id="61">61</div>
-                <div class="silla s62" data-id="62">62</div>
-                <div class="silla s63" data-id="63">63</div>
-                <div class="silla s64" data-id="64">64</div>
-                <div class="silla s65" data-id="65">65</div>
-                
-                
-                <div class="mesa v mbis1">Bis1</div>
-                <div class="silla s13" data-id="13">13</div>
-                <div class="silla s14" data-id="14">14</div>
-                <div class="silla s15" data-id="15">15</div>
-                <div class="silla s16" data-id="16">16</div>
-                <div class="silla s17" data-id="17">17</div>
-                
-                <div class="mesa v mbis2">Bis2</div>
-                <div class="silla s18" data-id="18">18</div>
-                <div class="silla s19" data-id="19">19</div>
-                <div class="silla s20" data-id="20">20</div>
-                <div class="silla s21" data-id="21">21</div>
-                <div class="silla s22" data-id="22">22</div>
-                
-                <div class="mesa v mbis3">Bis3</div>
-                <div class="silla s23" data-id="23">23</div>
-                <div class="silla s24" data-id="24">24</div>
-                <div class="silla s25" data-id="25">25</div>
-                <div class="silla s26" data-id="26">26</div>
-                <div class="silla s27" data-id="27">27</div>
-                
-                <div class="mesa h mbis4">Bis4</div>
-                <div class="silla s28" data-id="28">28</div>
-                <div class="silla s29" data-id="29">29</div>
-                
-                <div class="mesa h mbis5">Bis5</div>
-                <div class="silla s30" data-id="30">30</div>
-                <div class="silla s31" data-id="31">31</div>
-                
-                <div class="mesa v mr1">R1</div>
-                <div class="silla s32" data-id="32">32</div>
-                <div class="silla s33" data-id="33">33</div>
-                <div class="silla s34" data-id="34">34</div>
-                <div class="silla s35" data-id="35">35</div>
-                <div class="silla s36" data-id="36">36</div>
-                <div class="silla s37" data-id="37">37</div>
-                <div class="silla s38" data-id="38">38</div>
-                <div class="silla s39" data-id="39">39</div>
-                <div class="silla s40" data-id="40">40</div>
-                
-                
-                <div class="mesa v mb2">B2</div>
-                <div class="silla s78" data-id="78">78</div>
-                <div class="silla s79" data-id="79">79</div>
-                <div class="silla s80" data-id="80">80</div>
-                <div class="silla s81" data-id="81">81</div>
-                <div class="silla s82" data-id="82">82</div>
-                <div class="silla s83" data-id="83">83</div>
-                
-                <div class="mesa v mb1">B1</div>
-                <div class="silla s84" data-id="84">84</div>
-                <div class="silla s85" data-id="85">85</div>
-                <div class="silla s86" data-id="86">86</div>
-                <div class="silla s87" data-id="87">87</div>
+                <div class="silla s1" data-id="1">1</div><div class="silla s2" data-id="2">2</div>
+                <div class="silla s3" data-id="3">3</div><div class="silla s4" data-id="4">4</div>
+                <div class="silla s5" data-id="5">5</div><div class="silla s6" data-id="6">6</div>
 
+                <div class="mesa h m4">M4</div>
+                <div class="silla s7" data-id="7">7</div><div class="silla s8" data-id="8">8</div>
+                <div class="silla s9" data-id="9">9</div><div class="silla s10" data-id="10">10</div>
+                <div class="silla s11" data-id="11">11</div><div class="silla s12" data-id="12">12</div>
+
+                <div class="mesa rombo m6"><span>M6</span></div>
+                <div class="silla s52" data-id="52">52</div><div class="silla s53" data-id="53">53</div>
+                <div class="silla s54" data-id="54">54</div><div class="silla s55" data-id="55">55</div>
+                <div class="silla s56" data-id="56">56</div><div class="silla s57" data-id="57">57</div>
+
+                <div class="mesa h m7">M7</div>
+                <div class="silla s66" data-id="66">66</div><div class="silla s67" data-id="67">67</div>
+                <div class="silla s68" data-id="68">68</div><div class="silla s69" data-id="69">69</div>
+
+                <div class="mesa h m8">M8</div>
+                <div class="silla s70" data-id="70">70</div><div class="silla s71" data-id="71">71</div>
+                <div class="silla s72" data-id="72">72</div><div class="silla s73" data-id="73">73</div>
+
+                <div class="mesa h m9">M9</div>
+                <div class="silla s74" data-id="74">74</div><div class="silla s75" data-id="75">75</div>
+                <div class="silla s76" data-id="76">76</div><div class="silla s77" data-id="77">77</div>
+
+                <div class="mesa h m3">M3</div>
+                <div class="silla s92" data-id="92">92</div><div class="silla s93" data-id="93">93</div>
+                <div class="silla s94" data-id="94">94</div><div class="silla s95" data-id="95">95</div>
+
+                <div class="mesa h m2">M2</div>
+                <div class="silla s88" data-id="88">88</div><div class="silla s89" data-id="89">89</div>
+                <div class="silla s90" data-id="90">90</div><div class="silla s91" data-id="91">91</div>
+
+                <div class="mesa v mr2">R2</div>
+                <div class="silla s41" data-id="41">41</div><div class="silla s42" data-id="42">42</div>
+                <div class="silla s43" data-id="43">43</div><div class="silla s44" data-id="44">44</div>
+                <div class="silla s45" data-id="45">45</div><div class="silla s46" data-id="46">46</div>
+                <div class="silla s47" data-id="47">47</div><div class="silla s48" data-id="48">48</div>
+                <div class="silla s49" data-id="49">49</div><div class="silla s50" data-id="50">50</div>
+                <div class="silla s51" data-id="51">51</div>
+
+                <div class="mesa v mr3">R3</div>
+                <div class="silla s58" data-id="58">58</div><div class="silla s59" data-id="59">59</div>
+                <div class="silla s60" data-id="60">60</div><div class="silla s61" data-id="61">61</div>
+                <div class="silla s62" data-id="62">62</div><div class="silla s63" data-id="63">63</div>
+                <div class="silla s64" data-id="64">64</div><div class="silla s65" data-id="65">65</div>
+
+                <div class="mesa rombo mbis1"><span>Bis1</span></div><div class="silla s13" data-id="13">13</div><div class="silla s14" data-id="14">14</div><div class="silla s15" data-id="15">15</div><div class="silla s16" data-id="16">16</div><div class="silla s17" data-id="17">17</div>
+                <div class="mesa rombo mbis2"><span>Bis2</span></div><div class="silla s18" data-id="18">18</div><div class="silla s19" data-id="19">19</div><div class="silla s20" data-id="20">20</div><div class="silla s21" data-id="21">21</div><div class="silla s22" data-id="22">22</div>
+                <div class="mesa rombo mbis3"><span>Bis3</span></div><div class="silla s23" data-id="23">23</div><div class="silla s24" data-id="24">24</div><div class="silla s25" data-id="25">25</div><div class="silla s26" data-id="26">26</div><div class="silla s27" data-id="27">27</div>
+                <div class="mesa h mbis4">Bis4</div><div class="silla s28" data-id="28">28</div><div class="silla s29" data-id="29">29</div>
+                <div class="mesa h mbis5">Bis5</div><div class="silla s30" data-id="30">30</div><div class="silla s31" data-id="31">31</div>
+                <div class="mesa v mr1">R1</div><div class="silla s32" data-id="32">32</div><div class="silla s33" data-id="33">33</div><div class="silla s34" data-id="34">34</div><div class="silla s35" data-id="35">35</div><div class="silla s36" data-id="36">36</div><div class="silla s37" data-id="37">37</div><div class="silla s38" data-id="38">38</div><div class="silla s39" data-id="39">39</div><div class="silla s40" data-id="40">40</div>
+                <div class="mesa v mb2">B2</div><div class="silla s78" data-id="78">78</div><div class="silla s79" data-id="79">79</div><div class="silla s80" data-id="80">80</div><div class="silla s81" data-id="81">81</div><div class="silla s82" data-id="82">82</div><div class="silla s83" data-id="83">83</div>
+                <div class="mesa v mb1">B1</div><div class="silla s84" data-id="84">84</div><div class="silla s85" data-id="85">85</div><div class="silla s86" data-id="86">86</div><div class="silla s87" data-id="87">87</div>
             </div>
         </div>
 
         <div class="checkout-bar">
             <div class="legend-bar">
-                <div class="legend-i"><div class="legend-c" style="background: var(--disponible)"></div> Libre</div>
-                <div class="legend-i"><div class="legend-c" style="background: var(--seleccionado)"></div> Tu Lugar</div>
-                <div class="legend-i"><div class="legend-c" style="background: var(--ocupado)"></div> Obstruido / Vendido</div>
+                <div class="legend-i"><div class="legend-c libre"></div><span>Libre</span></div>
+                <div class="legend-i"><div class="legend-c tuyol"></div><span>Tu Lugar</span></div>
+                <div class="legend-i"><div class="legend-c vendido"></div><span>Obstruido / Vendido</span></div>
             </div>
-            <button id="btnAction" class="btn-reservation"></button>
         </div>
     </div>
 
-    <script>
-        const seleccionados = new Set();
-        const btnAction = document.getElementById('btnAction');
-
-        document.querySelectorAll('.silla').forEach(silla => {
-            silla.addEventListener('click', () => {
-                if (silla.classList.contains('occupied')) return;
-                const id = silla.getAttribute('data-id');
-                
-                if (seleccionados.has(id)) {
-                    seleccionados.delete(id);
-                    silla.classList.remove('selected');
-                } else {
-                    seleccionados.add(id);
-                    silla.classList.add('selected');
-                }
-
-                if (seleccionados.size > 0) {
-                    btnAction.style.display = 'block';
-                    btnAction.textContent = `RESERVAR ${seleccionados.size} LUGAR(ES) ($${seleccionados.size * 350})`;
-                } else {
-                    btnAction.style.display = 'none';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
