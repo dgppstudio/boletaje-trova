@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resumenTxt = document.getElementById('checkout-resumen');
     const btnComprar = document.getElementById('btn-comprar');
     
-    const PRECIO_ASIENTO = 350; // Ajusta el costo por boleto aquí
+    const PRECIO_ASIENTO = 250; // Ajusta el costo por boleto aquí
     let asientosSeleccionados = [];
 
     function actualizarCheckout() {
@@ -26,6 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
             btnComprar.innerText = `COMPRAR ${cant} ${cant === 1 ? 'ASISTENCIA' : 'ASISTENCIAS'} ($${total})`;
         }
     }
+
+    // Inicializa el estado del checkout nada más cargar la página
+    actualizarCheckout();
 
     sillas.forEach(silla => {
         if (silla.classList.contains('vendido')) return;
@@ -53,7 +56,5 @@ document.addEventListener('DOMContentLoaded', () => {
     btnComprar.addEventListener('click', () => {
         const listaIds = [...asientosSeleccionados].sort((a, b) => a - b).join(', ');
         alert(`¡Gracias por tu compra!\nAsientos reservados: ${listaIds}`);
-        
-        // Opcional: Aquí podrías redireccionar al usuario a la pasarela de pago o limpiar la selección.
     });
 });
