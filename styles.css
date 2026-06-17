@@ -233,26 +233,30 @@ body {
 .s49 { top: 145px; left: 55px; }
 
 /* ==========================================
-   BARRAS LATERALES: BARRA R3 (DEBAJO DE R2)
+   BARRAS LATERALES: BARRA R3 (AJUSTE CON MURO)
    ========================================== */
 
-/* Definimos el tamaño propio de la barra R3 libre de la clase v */
+/* Ajustamos las dimensiones para que quepan las 4 sillas de la izquierda */
 .mr3 { 
-    top: 200px; 
+    top: 215px; 
     left: 25px; 
-    width: 25px; 
-    height: 85px; 
+    width: 45px; 
+    height: 95px; 
 }
 
-/* Hilera vertical de 8 sillas (58 al 65) perfectamente espaciadas */
-.s58 { top: 200px; left: 55px; }
-.s59 { top: 220px; left: 55px; }
-.s60 { top: 240px; left: 55px; }
-.s61 { top: 260px; left: 55px; }
-.s62 { top: 280px; left: 55px; }
-.s63 { top: 300px; left: 55px; }
-.s64 { top: 320px; left: 55px; }
-.s65 { top: 340px; left: 55px; }
+/* LADO SUPERIOR (Izquierda a Derecha) */
+.s58 { top: 192px; left: 22px; }
+.s59 { top: 192px; left: 45px; }
+
+/* LADO IZQUIERDO (Arriba hacia Abajo) */
+.s60 { top: 215px; left: 2px; }
+.s61 { top: 235px; left: 2px; }
+.s62 { top: 255px; left: 2px; }
+.s63 { top: 275px; left: 2px; }
+
+/* LADO INFERIOR (Izquierda a Derecha) */
+.s64 { top: 315px; left: 22px; }
+.s65 { top: 315px; left: 45px; }
 
 /* ==========================================
    ZONA DE ESPERA PROVISIONAL AL FONDO
