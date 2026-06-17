@@ -271,13 +271,13 @@ body {
 }
 /* Hilera Izquierda (Distribución compacta en 70px) */
 .s78 { top: 525px; left: 86px; } /* 67px + 19px */
-.s79 { top: 548px; left: 86px; }
-.s80 { top: 571px; left: 86px; }
+.s79 { top: 550px; left: 86px; }
+.s80 { top: 576px; left: 86px; }
 
 /* Hilera Derecha */
 .s81 { top: 525px; left: 139px; } /* 120px + 19px */
-.s82 { top: 548px; left: 139px; }
-.s83 { top: 571px; left: 139px; }
+.s82 { top: 550px; left: 139px; }
+.s83 { top: 576px; left: 139px; }
 
 
 /* --- MESA B1 (95px de alto, movida 19px a la derecha) --- */
