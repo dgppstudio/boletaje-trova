@@ -3,7 +3,7 @@
    ========================================== */
 body {
     font-family: 'Lato', sans-serif;
-    background-color: #0f172a;
+    background-color: #0f172a; /* Fondo exterior oscuro */
     margin: 0;
     padding: 10px;
     display: flex;
@@ -13,7 +13,7 @@ body {
 .phone-wrapper {
     width: 100%;
     max-width: 430px;
-    background-color: #ffffff;
+    background-color: #ffffff; /* Cuerpo de la app blanco */
     border-radius: 30px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0,0,0,0.5);
@@ -33,21 +33,22 @@ body {
 
 .map-area {
     flex-grow: 1;
-    overflow: auto;
-    background-color: #f8fafc;
+    overflow: auto; /* Permite el scroll horizontal en tu teléfono */
+    background-color: #f8fafc; /* Fondo claro para ver contrastes */
     padding: 10px;
 }
 
+/* Lienzo amplio y estructurado para distribución limpia */
 .canvas-mapa {
     width: 380px;
-    height: 680px; /* Incrementado para dar espacio al fondo */
+    height: 600px;
     position: relative;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: #ffffff; /* Fondo del plano claro como el papel */
 }
 
 /* ==========================================
-   MUROS ESTRUCTURALES
+   MUROS ESTRUCTURALES REALES
    ========================================== */
 .muro-izq {
     position: absolute;
@@ -55,7 +56,7 @@ body {
     left: 0;
     width: 75px;
     height: 4px;
-    background-color: #cbd5e1;
+    background-color: #cbd5e1; /* Línea de pared superior izquierda */
 }
 .muro-separador-r2 {
     position: absolute;
@@ -63,7 +64,7 @@ body {
     left: 55px;
     width: 4px;
     height: 185px;
-    background-color: #cbd5e1;
+    background-color: #cbd5e1; /* Pared vertical del cuarto cerrado R-2 */
 }
 
 /* ==========================================
@@ -71,7 +72,7 @@ body {
    ========================================== */
 .mesa {
     position: absolute;
-    background-color: #1e293b;
+    background-color: #1e293b; /* Color oscuro para resaltar la madera */
     color: white;
     font-family: Arial, sans-serif;
     font-size: 9px;
@@ -87,7 +88,7 @@ body {
     position: absolute;
     width: 18px;
     height: 18px;
-    background-color: #008744;
+    background-color: #008744; /* Verde disponible de tu croquis */
     color: white;
     font-family: Arial, sans-serif;
     font-size: 8px;
@@ -100,17 +101,17 @@ body {
     z-index: 3;
 }
 
-/* Clases de Orientación Base */
+/* Tipos de Mesa según orientación */
 .mesa.h { width: 35px; height: 20px; }
 .mesa.v { width: 20px; height: 35px; }
 .mesa.rombo { width: 26px; height: 26px; transform: rotate(45deg); }
 .mesa.rombo span { transform: rotate(-45deg); }
 
-/* Escenario */
+/* Letrero del Escenario centrado */
 .stage-box {
     position: absolute;
     top: 0;
-    left: 75px;
+    left: 100px;
     width: 180px;
     height: 35px;
     background-color: #000033;
@@ -126,8 +127,10 @@ body {
 }
 
 /* ==========================================
-   ZONA 1: BLOQUE FRONTAL CENTRAL
+   ZONA 1: COORDENADAS BLOQUE FRONTAL
    ========================================== */
+
+/* --- MESA 5 --- */
 .m5 { top: 65px; left: 95px; }
 .s1 { top: 60px; left: 70px; }
 .s2 { top: 80px; left: 70px; }
@@ -136,88 +139,26 @@ body {
 .s5 { top: 95px; left: 98px; }
 .s6 { top: 95px; left: 118px; }
 
+/* --- MESA 4 --- */
 .m4 { top: 65px; left: 195px; }
 .s7 { top: 60px; left: 170px; }
 .s8 { top: 80px; left: 170px; }
 .s9 { top: 60px; left: 245px; }
 .s10 { top: 80px; left: 245px; }
-.s11 { top: 105px; left: 198px; }
+.s11 { top: 105px; left: 198px; } /* Bajadas un poco más para dar aire */
 .s12 { top: 105px; left: 218px; }
 
-.m6 { top: 165px; left: 100px; }
-.s52 { top: 135px; left: 104px; }
-.s53 { top: 168px; left: 70px; }
-.s54 { top: 195px; left: 80px; }
-.s55 { top: 205px; left: 104px; }
-.s56 { top: 145px; left: 128px; }
-.s57 { top: 168px; left: 140px; }
+/* --- MESA 6 (Rombo Central) --- */
+.m6 { top: 165px; left: 155px; }
+.s52 { top: 135px; left: 159px; } 
+.s53 { top: 168px; left: 125px; } 
+.s54 { top: 195px; left: 135px; } 
+.s55 { top: 205px; left: 159px; } 
+.s56 { top: 145px; left: 183px; } 
+.s57 { top: 168px; left: 195px; } 
 
 /* ==========================================
-   PASILLOS CENTRALES (IZQUIERDO Y DERECHO)
-   ========================================== */
-.m7 { top: 255px; left: 100px; }
-.s66 { top: 232px; left: 95px; } .s67 { top: 232px; left: 115px; }
-.s68 { top: 280px; left: 95px; } .s69 { top: 280px; left: 115px; }
-
-.m8 { top: 345px; left: 100px; }
-.s70 { top: 322px; left: 95px; } .s71 { top: 322px; left: 115px; }
-.s72 { top: 370px; left: 95px; } .s73 { top: 370px; left: 115px; }
-
-.m9 { top: 435px; left: 100px; }
-.s74 { top: 412px; left: 95px; } .s75 { top: 412px; left: 115px; }
-.s76 { top: 460px; left: 95px; } .s77 { top: 460px; left: 115px; }
-
-.m3 { top: 295px; left: 195px; }
-.s94 { top: 272px; left: 190px; } .s95 { top: 272px; left: 210px; }
-.s92 { top: 320px; left: 190px; } .s93 { top: 320px; left: 210px; }
-
-.m2 { top: 385px; left: 195px; }
-.s90 { top: 362px; left: 190px; } .s91 { top: 362px; left: 210px; }
-.s88 { top: 410px; left: 190px; } .s89 { top: 410px; left: 210px; }
-
-/* ==========================================
-   BARRAS IZQUIERDAS CORREGIDAS (¡FUERZA DE ANCHO!)
-   ========================================== */
-
-/* Usamos !important para ganarle a la herencia general y fijar el tamaño real */
-.mr2 { top: 60px; left: 5px; width: 35px !important; height: 165px !important; }
-
-.s41 { top: 62px;  left: 45px; }
-.s42 { top: 82px;  left: 45px; }
-.s43 { top: 102px; left: 45px; }
-.s44 { top: 122px; left: 45px; }
-.s45 { top: 142px; left: 45px; }
-.s46 { top: 162px; left: 45px; }
-.s47 { top: 182px; left: 45px; }
-.s48 { top: 202px; left: 45px; }
-
-.s49 { top: 75px;  left: 68px; }
-.s50 { top: 115px; left: 68px; }
-.s51 { top: 155px; left: 68px; }
-
-.mr3 { top: 250px; left: 5px; width: 35px !important; height: 165px !important; }
-
-.s58 { top: 252px; left: 45px; }
-.s59 { top: 272px; left: 45px; }
-.s60 { top: 292px; left: 45px; }
-.s61 { top: 312px; left: 45px; }
-.s62 { top: 332px; left: 45px; }
-.s63 { top: 352px; left: 45px; }
-.s64 { top: 372px; left: 45px; }
-.s65 { top: 392px; left: 45px; }
-
-/* ==========================================
-   ZONA DE ESPERA (PROVISIONAL AL FONDO)
-   ========================================== */
-/* Mandamos todo lo que falta por acomodar al fondo del lienzo para limpiar el rincón */
-.mbis1, .mbis2, .mbis3, .mbis4, .mbis5, .mr1, .mb1, .mb2,
-[class^="silla s1"], [class^="silla s2"], [class^="silla s3"] {
-    top: 550px;
-    left: 20px;
-}
-
-/* ==========================================
-   COMPONENTES DE COMPRA INFERIOR
+   COMPONENTES DE COMPRA INFERIOR (FIJO)
    ========================================== */
 .checkout-bar {
     background: white;
