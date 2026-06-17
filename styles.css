@@ -136,15 +136,6 @@ body {
    ZONA 1: CENTRADO FRONTAL (ESCENARIO, M5, M4)
    ========================================== */
 
-/* 1. Centramos el bloque del Escenario */
-.stage-box { 
-    position: absolute; 
-    top: 0; 
-    left: 105px; /* Calculado para centrar sus 180px en el canvas */
-    width: 180px; 
-    height: 35px; 
-}
-
 /* 2. Alineamos las Mesas Principales centradas bajo el escenario */
 .m5 { 
     top: 65px; 
@@ -177,11 +168,11 @@ body {
 .s7 { top: 60px; left: 170px; }
 .s8 { top: 80px; left: 170px; }
 /* Costado Corto Derecho (2 sillas) */
-.s9 { top: 60px; left: 245px; }
-.s10 { top: 80px; left: 245px; }
+.s9 { top: 95px; left: 198px; }
+.s10 { top: 95px; left: 218px; }
 /* Parte de Abajo (2 sillas viendo al frente) */
-.s11 { top: 95px; left: 198px; }
-.s12 { top: 95px; left: 218px; }
+.s11 { top: 80px; left: 245px; }
+.s12 { top: 60px; left: 245px; }
 
 /* ==========================================
    ZONA 1: CENTRADO DEL ROMBO CENTRAL (M6)
