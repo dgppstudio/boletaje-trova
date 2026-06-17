@@ -41,13 +41,65 @@ body {
     padding: 15px;
 }
 
-/* Tu Lienzo de dibujo exacto */
+/* Aseguramos que el lienzo tenga suficiente altura para mostrar los elementos inferiores */
 .canvas-mapa {
     position: relative;
-    width: 580px; /* Lo subimos de 380px a 580px para darle pista al scroll derecho */
-    height: 520px; 
+    width: 580px; 
+    height: 640px; /* Lo subimos a 640px para que entren cómodamente la escalera y el acceso */
     margin: 0 auto;
     background-color: #ffffff;
+}
+
+/* Colores de los estados de las sillas al interactuar */
+.silla.seleccionada {
+    background-color: #000033 !important; /* Azul oscuro ("Tu Lugar") */
+    color: #ffffff !important;
+}
+
+.silla.disponible {
+    background-color: #248a3d !important; /* Verde ("Libre") */
+    color: #ffffff !important;
+}
+
+/* Elementos Visuales Inferiores */
+.puerta-acceso {
+    position: absolute;
+    top: 610px; /* Ajustado dentro del nuevo límite */
+    left: 40px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #475569;
+    border-bottom: 2px dashed #cbd5e1;
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+    z-index: 30;
+}
+
+.escalera-bloque {
+    position: absolute;
+    top: 525px; /* Ajustado para convivir al lado de B2 y B1 */
+    left: 15px;
+    width: 45px;
+    height: 70px;
+    border: 1px solid #94a3b8;
+    background: repeating-linear-gradient(
+        0deg,
+        #ffffff,
+        #ffffff 8px,
+        #cbd5e1 8px,
+        #cbd5e1 10px
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+}
+.escalera-bloque span {
+    font-size: 9px;
+    color: #475569;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
 }
 
 /* ==========================================
