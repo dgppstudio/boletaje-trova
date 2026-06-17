@@ -1,9 +1,17 @@
-/* ==========================================
-   CONFIGURACIÓN GENERAL (MOCKUP MÓVIL)
-   ========================================== */
+:root {
+    --primary: #000033;
+    --accent: #eb5e28;
+    --disponible: #008744;
+    --seleccionado: #f1c40f;
+    --ocupado: #d32f2f;
+    --bg-body: #0f172a;
+}
+
+* { box-sizing: border-box; }
+
 body {
     font-family: 'Lato', sans-serif;
-    background-color: #0f172a; /* Fondo exterior oscuro */
+    background-color: var(--bg-body);
     margin: 0;
     padding: 10px;
     display: flex;
@@ -13,7 +21,7 @@ body {
 .phone-wrapper {
     width: 100%;
     max-width: 430px;
-    background-color: #ffffff; /* Cuerpo de la app blanco */
+    background-color: #ffffff;
     border-radius: 30px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0,0,0,0.5);
@@ -23,7 +31,7 @@ body {
 }
 
 .app-header {
-    background-color: #000033;
+    background-color: var(--primary);
     color: white;
     padding: 12px;
     text-align: center;
@@ -33,30 +41,45 @@ body {
 
 .map-area {
     flex-grow: 1;
-    overflow: auto; /* Permite el scroll horizontal en tu teléfono */
-    background-color: #f8fafc; /* Fondo claro para ver contrastes */
+    overflow: auto;
+    background-color: #f8fafc;
     padding: 10px;
 }
 
 /* Lienzo amplio y estructurado para distribución limpia */
-.canvas-mapa {
+.canvas-plano {
     width: 380px;
     height: 600px;
     position: relative;
     margin: 0 auto;
-    background-color: #ffffff; /* Fondo del plano claro como el papel */
 }
 
-/* ==========================================
-   MUROS ESTRUCTURALES REALES
-   ========================================== */
+.stage-box {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    width: 180px;
+    height: 35px;
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
+    border-radius: 4px;
+}
+
+/* MUROS ESTRUCTURALES */
 .muro-izq {
     position: absolute;
     top: 48px;
     left: 0;
     width: 75px;
     height: 4px;
-    background-color: #cbd5e1; /* Línea de pared superior izquierda */
+    background-color: #cbd5e1;
 }
 .muro-separador-r2 {
     position: absolute;
@@ -64,102 +87,83 @@ body {
     left: 55px;
     width: 4px;
     height: 185px;
-    background-color: #cbd5e1; /* Pared vertical del cuarto cerrado R-2 */
+    background-color: #cbd5e1;
 }
 
-/* ==========================================
-   ESTILOS BASE: MESAS Y SILLAS
-   ========================================== */
+/* ELEMENTOS DEL PLANO (Mesas Compactas para Evitar Traslapes) */
 .mesa {
     position: absolute;
-    background-color: #1e293b; /* Color oscuro para resaltar la madera */
+    background-color: #1e293b;
     color: white;
-    font-family: Arial, sans-serif;
     font-size: 9px;
     font-weight: bold;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     border-radius: 3px;
-    z-index: 2;
 }
 
+.mesa.v { width: 20px; height: 35px; }
+.mesa.h { width: 35px; height: 20px; }
+.mesa.rombo { width: 26px; height: 26px; transform: rotate(45deg); }
+.mesa.rombo span { transform: rotate(-45deg); }
+
+/* SILLAS INTERACTIVAS */
 .silla {
     position: absolute;
     width: 18px;
     height: 18px;
-    background-color: #008744; /* Verde disponible de tu croquis */
+    background-color: var(--disponible);
     color: white;
-    font-family: Arial, sans-serif;
     font-size: 8px;
     font-weight: bold;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     border-radius: 3px;
     cursor: pointer;
-    z-index: 3;
+    user-select: none;
+    transition: all 0.15s ease;
 }
+.silla:active { transform: scale(0.85); }
+.silla.selected { background-color: var(--seleccionado); color: #000; box-shadow: 0 0 6px var(--seleccionado); }
+.silla.occupied { background-color: var(--ocupado); cursor: not-allowed; opacity: 0.6; }
 
-/* Tipos de Mesa según orientación */
-.mesa.h { width: 35px; height: 20px; }
-.mesa.v { width: 20px; height: 35px; }
-.mesa.rombo { width: 26px; height: 26px; transform: rotate(45deg); }
-.mesa.rombo span { transform: rotate(-45deg); }
+/* COORDINADAS LÓGICAS INTERNAS */
+.r2-box { position: absolute; top: 65px; left: 5px; width: 15px; height: 160px; background: #64748b; color: white; font-size: 8px; display: flex; align-items: center; justify-content: center; border-radius: 2px; }
 
-/* Letrero del Escenario centrado */
-.stage-box {
-    position: absolute;
-    top: 0;
-    left: 100px;
-    width: 180px;
-    height: 35px;
-    background-color: #000033;
-    color: #fff;
-    font-family: 'Urbanist', sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    letter-spacing: 2px;
-}
+.s41 { top: 65px; left: 28px; }
+.s42 { top: 85px; left: 28px; }
+.s43 { top: 105px; left: 28px; }
+.s44 { top: 125px; left: 28px; }
+.s45 { top: 145px; left: 28px; }
+.s46 { top: 165px; left: 28px; }
+.s47 { top: 185px; left: 28px; }
+.s48 { top: 205px; left: 28px; }
 
-/* ==========================================
-   ZONA 1: COORDENADAS BLOQUE FRONTAL
-   ========================================== */
+.m5 { top: 65px; left: 105px; }
+.s1 { top: 66px; left: 82px; }
+.s2 { top: 66px; left: 145px; }
 
-/* --- MESA 5 --- */
-.m5 { top: 65px; left: 95px; }
-.s1 { top: 60px; left: 70px; }
-.s2 { top: 80px; left: 70px; }
-.s3 { top: 60px; left: 145px; }
-.s4 { top: 80px; left: 145px; }
-.s5 { top: 95px; left: 98px; }
-.s6 { top: 95px; left: 118px; }
+.m6 { top: 135px; left: 110px; }
+.s52 { top: 110px; left: 114px; }
+.s53 { top: 139px; left: 86px; }
+.s55 { top: 168px; left: 114px; }
+.s57 { top: 139px; left: 142px; }
 
-/* --- MESA 4 --- */
-.m4 { top: 65px; left: 195px; }
-.s7 { top: 60px; left: 170px; }
-.s8 { top: 80px; left: 170px; }
-.s9 { top: 60px; left: 245px; }
-.s10 { top: 80px; left: 245px; }
-.s11 { top: 105px; left: 198px; } /* Bajadas un poco más para dar aire */
-.s12 { top: 105px; left: 218px; }
+.m7 { top: 230px; left: 110px; }
+.s66 { top: 208px; left: 110px; }
+.s67 { top: 208px; left: 128px; }
+.s68 { top: 255px; left: 110px; }
+.s69 { top: 255px; left: 128px; }
 
-/* --- MESA 6 (Rombo Central) --- */
-.m6 { top: 165px; left: 155px; }
-.s52 { top: 135px; left: 159px; } 
-.s53 { top: 168px; left: 125px; } 
-.s54 { top: 195px; left: 135px; } 
-.s55 { top: 205px; left: 159px; } 
-.s56 { top: 145px; left: 183px; } 
-.s57 { top: 168px; left: 195px; } 
+.m3 { top: 390px; left: 140px; }
+.s94 { top: 368px; left: 140px; }
+.s95 { top: 368px; left: 158px; }
+.s92 { top: 415px; left: 140px; }
+.s93 { top: 415px; left: 158px; }
 
-/* ==========================================
-   COMPONENTES DE COMPRA INFERIOR (FIJO)
-   ========================================== */
+/* COMPONENTES DE COMPRA INFERIOR */
 .checkout-bar {
     background: white;
     border-top: 1px solid #e2e8f0;
@@ -171,3 +175,18 @@ body {
 .legend-bar { display: flex; justify-content: space-around; font-size: 10px; color: #64748b; }
 .legend-i { display: flex; align-items: center; gap: 4px; }
 .legend-c { width: 10px; height: 10px; border-radius: 2px; }
+
+.btn-reservation {
+    background-color: var(--accent);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+    display: none;
+    font-size: 13px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(235, 94, 40, 0.2);
+}
