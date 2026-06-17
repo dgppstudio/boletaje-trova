@@ -106,41 +106,52 @@ body {
 }
 
 /* ==========================================
-   ESCENARIO Y BLOQUE FRONTAL (TU ALINEACIÓN)
+   ZONA 1: AJUSTES FRONTALES Y NUMERACIÓN
    ========================================== */
+
+/* 1. Centramos el Escenario en el lienzo */
 .stage-box {
     position: absolute;
-    top: 5px;
-    left: 75px;
+    top: 0;
+    left: 75px; /* Calculado para centrar sus 180px en el canvas de 380px */
     width: 180px;
     height: 35px;
-    background-color: #000033;
+    background-color: #000033; /* Color oscuro para el escenario */
     color: #ffffff;
-    font-size: 12px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
+    letter-spacing: 2px;
 }
 
-/* --- MESA 5 --- */
-.m5 { top: 65px; left: 95px; }
+/* 2. Recalculamos la numeración "reloj inverso" para MESA 5 */
+.m5 { top: 65px; left: 95px; } /* Mantenemos posición de la mesa */
+/* Lado Corto Izquierdo (Mismo lugar) */
 .s1 { top: 60px; left: 70px; }
 .s2 { top: 80px; left: 70px; }
-.s3 { top: 60px; left: 145px; }
-.s4 { top: 80px; left: 145px; }
-.s5 { top: 95px; left: 98px; }
-.s6 { top: 95px; left: 118px; }
+/* Parte Inferior (3 y 4 de izquierda a derecha) */
+.s3 { top: 95px; left: 98px; }
+.s4 { top: 95px; left: 118px; }
+/* Lado Corto Derecho (6 arriba, 5 abajo) */
+.s6 { top: 60px; left: 145px; }
+.s5 { top: 80px; left: 145px; }
 
-/* --- MESA 4 --- */
-.m4 { top: 65px; left: 195px; }
+
+/* 3. Recalculamos la numeración "reloj inverso" para MESA 4 */
+.m4 { top: 65px; left: 195px; } /* Mantenemos posición de la mesa */
+/* Lado Corto Izquierdo (Mismo lugar) */
 .s7 { top: 60px; left: 170px; }
 .s8 { top: 80px; left: 170px; }
-.s9 { top: 60px; left: 245px; }
-.s10 { top: 80px; left: 245px; }
-.s11 { top: 95px; left: 198px; }
-.s12 { top: 95px; left: 218px; }
+/* Parte Inferior (9 y 10 de izquierda a derecha) */
+.s9 { top: 95px; left: 198px; }
+.s10 { top: 95px; left: 218px; }
+/* Lado Corto Derecho (12 arriba, 11 abajo) */
+.s12 { top: 60px; left: 245px; }
+.s11 { top: 80px; left: 245px; }
 
 /* --- MESA 6 (Rombo) --- */
 .m6 { top: 165px; left: 100px; }
