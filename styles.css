@@ -262,39 +262,41 @@ body {
    BARRAS LATERALES: ACCESO INFERIOR B2 Y B1
    ========================================== */
 
-/* --- MESA B2 (Más corta, 55px de alto) --- */
+/* --- MESA B2 (Igual a R2: 95px de alto y alineada abajo de M9) --- */
 .mb2 {
-    top: 410px;
-    left: 25px;
+    top: 510px;
+    left: 90px; /* Alineada exacto con M9 */
     width: 25px;
-    height: 55px;
+    height: 95px;
 }
-/* Pareja Izquierda (Arriba a Abajo) */
-.s79 { top: 410px; left: 2px; }
-.s80 { top: 435px; left: 2px; }
+/* Hilera Izquierda (Arriba a Abajo: 78, 79, 80) */
+.s78 { top: 510px; left: 67px; }
+.s79 { top: 535px; left: 67px; }
+.s80 { top: 560px; left: 67px; }
 
-/* Pareja Derecha (Arriba a Abajo) - Alineadas con el left de s51/s49 */
-.s83 { top: 410px; left: 55px; }
-.s81 { top: 435px; left: 55px; }
+/* Hilera Derecha (Arriba a Abajo: 81, 82, 83) */
+.s81 { top: 510px; left: 120px; }
+.s82 { top: 535px; left: 120px; }
+.s83 { top: 560px; left: 120px; }
 
 
-/* --- MESA B1 (Mismo tamaño que R2: 95px de alto) --- */
+/* --- MESA B1 (95px de alto y alineada con M2/M3) --- */
 .mb1 {
-    top: 410px;
-    left: 95px; /* Desplazada a la derecha para dejar pasillo de acceso */
+    top: 510px;
+    left: 186px; /* Alineada exacto con M2 y M3 */
     width: 25px;
     height: 95px;
 }
 /* Hilera Izquierda Única (Arriba a Abajo: 87 al 84) */
-.s87 { top: 410px; left: 72px; } /* Ajustado a la izquierda de la mesa B1 */
-.s86 { top: 435px; left: 72px; }
-.s85 { top: 460px; left: 72px; }
-.s84 { top: 485px; left: 72px; }
+.s87 { top: 510px; left: 163px; }
+.s86 { top: 535px; left: 163px; }
+.s85 { top: 560px; left: 163px; }
+.s84 { top: 585px; left: 163px; }
 
 /* ==========================================
    ZONA DE ESPERA PROVISIONAL AL FONDO
    ========================================== */
-.mbis1, .mbis2, .mbis3, .mbis4, .mbis5, .mr1, .mb1, .mb2,
+.mbis1, .mbis2, .mbis3, .mbis4, .mbis5, .mr1,
 [class^="silla s13"], [class^="silla s14"], [class^="silla s15"], [class^="silla s16"], [class^="silla s17"],
 [class^="silla s18"], [class^="silla s19"] {
     top: 480px;
