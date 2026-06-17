@@ -436,6 +436,6 @@ body {
     height: 12px;
     border-radius: 3px;
 }
-.legend-c.libre { background-color: #248a3d; }
-.legend-c.tuyol { background-color: #000033; }
-.legend-c.vendido { background-color: #cbd5e1; }
+.legend-c.libre { background-color: #64748B; }
+.legend-c.tuyol { background-color: #10B981; }
+.legend-c.vendido { background-color: #E2E8F0; }
