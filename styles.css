@@ -1,50 +1,52 @@
 /* ==========================================
-   CONFIGURACIÓN GENERAL (MOCKUP MÓVIL)
+   CONFIGURACIÓN GENERAL DEL LIENZO
    ========================================== */
-body {
-    font-family: 'Lato', sans-serif;
-    background-color: #0f172a;
-    margin: 0;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-}
-
-.phone-wrapper {
-    width: 100%;
-    max-width: 430px;
-    background-color: #ffffff;
-    border-radius: 30px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-    display: flex;
-    flex-direction: column;
-    height: 94vh;
-}
-
-.app-header {
-    background-color: #000033;
-    color: white;
-    padding: 12px;
-    text-align: center;
-}
-.app-header h1 { font-family: 'Urbanist', sans-serif; margin: 0; font-size: 16px; letter-spacing: 1px; }
-.app-header p { margin: 3px 0 0 0; font-size: 11px; color: #94a3b8; }
-
-.map-area {
-    flex-grow: 1;
-    overflow: auto;
-    background-color: #f8fafc;
-    padding: 10px;
-}
-
 .canvas-mapa {
-    width: 380px;
-    height: 680px; /* Incrementado para dar espacio al fondo */
     position: relative;
+    width: 380px; /* Mantiene el scroll horizontal */
+    height: 680px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: #ffffff; /* Fondo claro para los pasillos */
+    border: 2px solid #333;
 }
+
+/* Elementos Base */
+.mesa {
+    position: absolute;
+    background-color: #1e293b;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.silla {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #28a745;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/* Tamaños por clase */
+.mesa.h { width: 45px; height: 25px; }
+.mesa.v { width: 25px; height: 45px; } /* Regla general */
+.mesa.rombo { width: 26px; height: 26px; transform: rotate(45deg); }
+.mesa.rombo span { transform: rotate(-45deg); }
 
 /* ==========================================
    MUROS ESTRUCTURALES
@@ -67,67 +69,26 @@ body {
 }
 
 /* ==========================================
-   ESTILOS BASE: MESAS Y SILLAS
+   ESCENARIO Y ZONA FRONTAL (TU ALINEACIÓN)
    ========================================== */
-.mesa {
-    position: absolute;
-    background-color: #1e293b;
-    color: white;
-    font-family: Arial, sans-serif;
-    font-size: 9px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
-    z-index: 2;
-}
-
-.silla {
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background-color: #008744;
-    color: white;
-    font-family: Arial, sans-serif;
-    font-size: 8px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
-    cursor: pointer;
-    z-index: 3;
-}
-
-/* Clases de Orientación Base */
-.mesa.h { width: 35px; height: 20px; }
-.mesa.v { width: 20px; height: 35px; }
-.mesa.rombo { width: 26px; height: 26px; transform: rotate(45deg); }
-.mesa.rombo span { transform: rotate(-45deg); }
-
-/* Escenario */
 .stage-box {
     position: absolute;
     top: 0;
-    left: 75px;
+    left: 75px; /* Tu ajuste exacto */
     width: 180px;
     height: 35px;
     background-color: #000033;
     color: #fff;
-    font-family: 'Urbanist', sans-serif;
-    font-size: 13px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
     letter-spacing: 2px;
 }
 
-/* ==========================================
-   ZONA 1: BLOQUE FRONTAL CENTRAL
-   ========================================== */
+/* --- MESA 5 --- */
 .m5 { top: 65px; left: 95px; }
 .s1 { top: 60px; left: 70px; }
 .s2 { top: 80px; left: 70px; }
@@ -136,6 +97,7 @@ body {
 .s5 { top: 95px; left: 98px; }
 .s6 { top: 95px; left: 118px; }
 
+/* --- MESA 4 --- */
 .m4 { top: 65px; left: 195px; }
 .s7 { top: 60px; left: 170px; }
 .s8 { top: 80px; left: 170px; }
@@ -144,6 +106,7 @@ body {
 .s11 { top: 105px; left: 198px; }
 .s12 { top: 105px; left: 218px; }
 
+/* --- MESA 6 (Rombo) --- */
 .m6 { top: 165px; left: 100px; }
 .s52 { top: 135px; left: 104px; }
 .s53 { top: 168px; left: 70px; }
@@ -153,7 +116,7 @@ body {
 .s57 { top: 168px; left: 140px; }
 
 /* ==========================================
-   PASILLOS CENTRALES (IZQUIERDO Y DERECHO)
+   PASILLOS CENTRALES
    ========================================== */
 .m7 { top: 255px; left: 100px; }
 .s66 { top: 232px; left: 95px; } .s67 { top: 232px; left: 115px; }
@@ -176,12 +139,10 @@ body {
 .s88 { top: 410px; left: 190px; } .s89 { top: 410px; left: 210px; }
 
 /* ==========================================
-   BARRAS IZQUIERDAS CORREGIDAS (¡FUERZA DE ANCHO!)
+   BARRAS IZQUIERDAS (SOLUCIÓN ESPECÍFICA)
    ========================================== */
-
-/* Usamos !important para ganarle a la herencia general y fijar el tamaño real */
-.mr2 { top: 60px; left: 5px; width: 35px !important; height: 165px !important; }
-
+/* Usamos el ID o la clase directa ignorando el .v genérico para que no colisione */
+#R2, .mr2 { top: 60px; left: 5px; width: 35px !important; height: 165px !important; }
 .s41 { top: 62px;  left: 45px; }
 .s42 { top: 82px;  left: 45px; }
 .s43 { top: 102px; left: 45px; }
@@ -190,13 +151,11 @@ body {
 .s46 { top: 162px; left: 45px; }
 .s47 { top: 182px; left: 45px; }
 .s48 { top: 202px; left: 45px; }
-
 .s49 { top: 75px;  left: 68px; }
 .s50 { top: 115px; left: 68px; }
 .s51 { top: 155px; left: 68px; }
 
-.mr3 { top: 250px; left: 5px; width: 35px !important; height: 165px !important; }
-
+#R3, .mr3 { top: 250px; left: 5px; width: 35px !important; height: 165px !important; }
 .s58 { top: 252px; left: 45px; }
 .s59 { top: 272px; left: 45px; }
 .s60 { top: 292px; left: 45px; }
@@ -207,26 +166,11 @@ body {
 .s65 { top: 392px; left: 45px; }
 
 /* ==========================================
-   ZONA DE ESPERA (PROVISIONAL AL FONDO)
+   ZONA DE ESPERA AL FONDO (SIN ESTORBAR)
    ========================================== */
-/* Mandamos todo lo que falta por acomodar al fondo del lienzo para limpiar el rincón */
 .mbis1, .mbis2, .mbis3, .mbis4, .mbis5, .mr1, .mb1, .mb2,
-[class^="silla s1"], [class^="silla s2"], [class^="silla s3"] {
+[class^="silla s13"], [class^="silla s14"], [class^="silla s15"], [class^="silla s16"], [class^="silla s17"],
+[class^="silla s18"], [class^="silla s19"], [class^="silla s2"], [class^="silla s3"] {
     top: 550px;
     left: 20px;
 }
-
-/* ==========================================
-   COMPONENTES DE COMPRA INFERIOR
-   ========================================== */
-.checkout-bar {
-    background: white;
-    border-top: 1px solid #e2e8f0;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-.legend-bar { display: flex; justify-content: space-around; font-size: 10px; color: #64748b; }
-.legend-i { display: flex; align-items: center; gap: 4px; }
-.legend-c { width: 10px; height: 10px; border-radius: 2px; }
