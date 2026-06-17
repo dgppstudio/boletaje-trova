@@ -394,6 +394,50 @@ body {
 .s28 { top: 163px; left: 500px; } /* Derecha */
 
 /* ==========================================
+   DETALLES FINALES: ESCALERA Y ACCESO
+   ========================================== */
+
+/* Indicador de la Puerta de Acceso Principal */
+.puerta-acceso {
+    position: absolute;
+    top: 590px;
+    left: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #64748b;
+    border-bottom: 2px dashed #cbd5e1;
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+}
+
+/* Representación de la Escalera (Líneas sutiles) */
+.escalera-bloque {
+    position: absolute;
+    top: 510px;
+    left: 15px;
+    width: 40px;
+    height: 60px;
+    border: 1px solid #cbd5e1;
+    background: repeating-linear-gradient(
+        0deg,
+        #ffffff,
+        #ffffff 8px,
+        #cbd5e1 8px,
+        #cbd5e1 10px
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.escalera-bloque span {
+    font-size: 8px;
+    color: #64748b;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+}
+
+/* ==========================================
    BARRA DE DESCRIPCIÓN Y LEYENDAS (FIJA ABAJO)
    ========================================== */
 .checkout-bar {
