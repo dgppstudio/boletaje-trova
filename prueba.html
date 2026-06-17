@@ -294,12 +294,19 @@
         </div>
 
         <div class="checkout-bar">
-            <div class="legend-bar">
-                <div class="legend-i"><div class="legend-c" style="background: var(--disponible)"></div> Libre</div>
-                <div class="legend-i"><div class="legend-c" style="background: var(--seleccionado)"></div> Tu lugar</div>
-                <div class="legend-i"><div class="legend-c" style="background: var(--ocupado)"></div> Ocupado</div>
+            <div id="checkout-resumen" style="font-size: 13px; font-weight: bold; color: #1e293b; text-align: center; margin-bottom: 5px;">
+                Selecciona un asiento para comenzar
             </div>
-            <button id="btnAction" class="btn-reservation">RESERVAR 0 LUGARES</button>
+            
+            <button id="btn-comprar" style="display: none; width: 100%; background-color: #000033; color: #ffffff; border: none; padding: 15px; border-radius: 12px; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; margin-bottom: 5px;">
+                Comprar 1 Asistencia ($250)
+            </button>
+            
+            <div class="legend-bar">
+                <div class="legend-i"><div class="legend-c libre" style="background-color: #64748b;"></div><span>Disponible</span></div>
+                <div class="legend-i"><div class="legend-c tuyol" style="background-color: #10b981;"></div><span>Tu Lugar</span></div>
+                <div class="legend-i"><div class="legend-c vendido" style="background-color: #e2e8f0;"></div><span>Vendido</span></div>
+            </div>
         </div>
     </div>
 
