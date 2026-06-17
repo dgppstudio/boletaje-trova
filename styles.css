@@ -133,43 +133,76 @@ body {
 .r2-box { position: absolute; top: 65px; left: 5px; width: 15px; height: 160px; background: #64748b; color: white; font-size: 8px; display: flex; align-items: center; justify-content: center; border-radius: 2px; }
 
 /* ==========================================
-   ZONA 1: PRIMERA FILA (M5 Y M4) SIN ESPALDAS
+   ZONA 1: CENTRADO FRONTAL (ESCENARIO, M5, M4)
    ========================================== */
 
-/* --- MESA 5 (Frente Izquierda) --- */
+/* 1. Centramos el bloque del Escenario */
+.stage-box { 
+    position: absolute; 
+    top: 0; 
+    left: 105px; /* Calculado para centrar sus 180px en el canvas */
+    width: 180px; 
+    height: 35px; 
+}
+
+/* 2. Alineamos las Mesas Principales centradas bajo el escenario */
 .m5 { 
     top: 65px; 
-    left: 70px; 
+    left: 95px; /* Movida a la derecha para centrar el bloque */
     width: 45px; 
     height: 25px; 
 }
-/* Costado Corto Izquierdo (2 sillas) */
-.s1 { top: 60px; left: 45px; }
-.s2 { top: 80px; left: 45px; }
-/* Costado Corto Derecho (2 sillas) */
-.s3 { top: 60px; left: 120px; }
-.s4 { top: 80px; left: 120px; }
-/* Parte de Abajo (2 sillas viendo al frente) */
-.s5 { top: 95px; left: 73px; }
-.s6 { top: 95px; left: 93px; }
-
-
-/* --- MESA 4 (Frente Derecha) --- */
 .m4 { 
     top: 65px; 
-    left: 175px; 
+    left: 195px; /* Movida a la derecha para guardar simetría */
     width: 45px; 
     height: 25px; 
 }
+
+/* 3. Reacomodo Simétrico de sus Sillas (Respetando inventario y UX) */
+
+/* --- Sillas de MESA 5 (Centradas bajo M5) --- */
 /* Costado Corto Izquierdo (2 sillas) */
-.s7 { top: 60px; left: 150px; }
-.s8 { top: 80px; left: 150px; }
+.s1 { top: 60px; left: 70px; }
+.s2 { top: 80px; left: 70px; }
 /* Costado Corto Derecho (2 sillas) */
-.s9 { top: 60px; left: 225px; }
-.s10 { top: 80px; left: 225px; }
+.s3 { top: 60px; left: 145px; }
+.s4 { top: 80px; left: 145px; }
 /* Parte de Abajo (2 sillas viendo al frente) */
-.s11 { top: 95px; left: 178px; }
-.s12 { top: 95px; left: 198px; }
+.s5 { top: 95px; left: 98px; }
+.s6 { top: 95px; left: 118px; }
+
+/* --- Sillas de MESA 4 (Centradas bajo M4) --- */
+/* Costado Corto Izquierdo (2 sillas) */
+.s7 { top: 60px; left: 170px; }
+.s8 { top: 80px; left: 170px; }
+/* Costado Corto Derecho (2 sillas) */
+.s9 { top: 60px; left: 245px; }
+.s10 { top: 80px; left: 245px; }
+/* Parte de Abajo (2 sillas viendo al frente) */
+.s11 { top: 95px; left: 198px; }
+.s12 { top: 95px; left: 218px; }
+
+/* ==========================================
+   ZONA 1: CENTRADO DEL ROMBO CENTRAL (M6)
+   ========================================== */
+
+/* Se coloca justo abajo y al centro del espacio entre M5 y M4 */
+.m6 { 
+    top: 155px; 
+    left: 155px; /* Centrado perfecto en el eje del escenario */
+    width: 26px; 
+    height: 26px; 
+    transform: rotate(45deg); 
+}
+
+/* Sillas posicionadas alrededor de las caras del diamante */
+.s52 { top: 125px; left: 158px; } /* Punta Norte */
+.s53 { top: 155px; left: 125px; } /* Punta Oeste */
+.s54 { top: 180px; left: 135px; } /* Diagonal Suroeste */
+.s55 { top: 190px; left: 158px; } /* Punta Sur */
+.s56 { top: 135px; left: 183px; } /* Diagonal Noreste */
+.s57 { top: 155px; left: 192px; } /* Punta Este */
 
 /* COMPONENTES DE COMPRA INFERIOR */
 .checkout-bar {
