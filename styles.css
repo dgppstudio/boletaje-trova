@@ -148,14 +148,72 @@ body {
 .s11 { top: 105px; left: 198px; } /* Bajadas un poco más para dar aire */
 .s12 { top: 105px; left: 218px; }
 
-/* --- MESA 6 (Rombo Central) --- */
-.m6 { top: 165px; left: 155px; }
-.s52 { top: 135px; left: 159px; } 
-.s53 { top: 168px; left: 125px; } 
-.s54 { top: 195px; left: 135px; } 
-.s55 { top: 205px; left: 159px; } 
-.s56 { top: 145px; left: 183px; } 
-.s57 { top: 168px; left: 195px; } 
+/* --- MESA 6 (Rombo Central - Movido a Left 100px) --- */
+.m6 { 
+    top: 165px; 
+    left: 100px; /* Movida a tu coordenada exacta */
+}
+
+/* Sillas recalculadas simétricamente desde el nuevo eje (100px) */
+.s52 { top: 135px; left: 104px; } /* Punta Norte */
+.s53 { top: 168px; left: 70px;  } /* Punta Oeste */
+.s54 { top: 195px; left: 80px;  } /* Diagonal Suroeste */
+.s55 { top: 205px; left: 104px; } /* Punta Sur */
+.s56 { top: 145px; left: 128px; } /* Diagonal Noreste */
+.s57 { top: 168px; left: 140px; } /* Punta Este */
+
+/* ==========================================
+   PASILLO IZQUIERDO: MESAS 7, 8 Y 9 (EJE LEFT 100px)
+   ========================================== */
+
+/* --- MESA 7 (Justo abajo de la Mesa 6) --- */
+.m7 { top: 255px; left: 100px; }
+/* 2 Sillas arriba viendo al escenario */
+.s66 { top: 232px; left: 95px; }
+.s67 { top: 232px; left: 115px; }
+/* 2 Sillas abajo */
+.s68 { top: 280px; left: 95px; }
+.s69 { top: 280px; left: 115px; }
+
+/* --- MESA 8 (Siguiente hacia abajo) --- */
+.m8 { top: 345px; left: 100px; }
+/* 2 Sillas arriba */
+.s70 { top: 322px; left: 95px; }
+.s71 { top: 322px; left: 115px; }
+/* 2 Sillas abajo */
+.s72 { top: 370px; left: 95px; }
+.s73 { top: 370px; left: 115px; }
+
+/* --- MESA 9 (Al final de este pasillo) --- */
+.m9 { top: 435px; left: 100px; }
+/* 2 Sillas arriba */
+.s74 { top: 412px; left: 95px; }
+.s75 { top: 412px; left: 115px; }
+/* 2 Sillas abajo */
+.s76 { top: 460px; left: 95px; }
+.s77 { top: 460px; left: 115px; }
+
+/* ==========================================
+   PASILLO DERECHO: MESAS 3 Y 2 (EJE LEFT 195px)
+   ========================================== */
+
+/* --- MESA 3 (Frente a las escaleras / Pasillo Derecho) --- */
+.m3 { top: 295px; left: 195px; }
+/* 2 Sillas arriba */
+.s94 { top: 272px; left: 190px; }
+.s95 { top: 272px; left: 210px; }
+/* 2 Sillas abajo */
+.s92 { top: 320px; left: 190px; }
+.s93 { top: 320px; left: 210px; }
+
+/* --- MESA 2 (Abajo de la Mesa 3) --- */
+.m2 { top: 385px; left: 195px; }
+/* 2 Sillas arriba */
+.s90 { top: 362px; left: 190px; }
+.s91 { top: 362px; left: 210px; }
+/* 2 Sillas abajo */
+.s88 { top: 410px; left: 190px; }
+.s89 { top: 410px; left: 210px; }
 
 /* ==========================================
    COMPONENTES DE COMPRA INFERIOR (FIJO)
