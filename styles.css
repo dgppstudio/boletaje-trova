@@ -262,36 +262,36 @@ body {
    BARRAS LATERALES: ACCESO INFERIOR B2 Y B1
    ========================================== */
 
-/* --- MESA B2 (Igual a R2: 95px de alto y alineada abajo de M9) --- */
+/* --- MESA B2 (70px de alto, bajada 15px y movida 19px a la derecha) --- */
 .mb2 {
-    top: 510px;
-    left: 90px; /* Alineada exacto con M9 */
+    top: 525px;
+    left: 109px; /* 90px + 19px */
     width: 25px;
-    height: 95px;
+    height: 70px;
 }
-/* Hilera Izquierda (Arriba a Abajo: 78, 79, 80) */
-.s78 { top: 510px; left: 67px; }
-.s79 { top: 535px; left: 67px; }
-.s80 { top: 560px; left: 67px; }
+/* Hilera Izquierda (Distribución compacta en 70px) */
+.s78 { top: 525px; left: 86px; } /* 67px + 19px */
+.s79 { top: 548px; left: 86px; }
+.s80 { top: 571px; left: 86px; }
 
-/* Hilera Derecha (Arriba a Abajo: 81, 82, 83) */
-.s81 { top: 510px; left: 120px; }
-.s82 { top: 535px; left: 120px; }
-.s83 { top: 560px; left: 120px; }
+/* Hilera Derecha */
+.s81 { top: 525px; left: 139px; } /* 120px + 19px */
+.s82 { top: 548px; left: 139px; }
+.s83 { top: 571px; left: 139px; }
 
 
-/* --- MESA B1 (95px de alto y alineada con M2/M3) --- */
+/* --- MESA B1 (95px de alto, movida 19px a la derecha) --- */
 .mb1 {
     top: 510px;
-    left: 186px; /* Alineada exacto con M2 y M3 */
+    left: 205px; /* 186px + 19px */
     width: 25px;
     height: 95px;
 }
-/* Hilera Izquierda Única (Arriba a Abajo: 87 al 84) */
-.s87 { top: 510px; left: 163px; }
-.s86 { top: 535px; left: 163px; }
-.s85 { top: 560px; left: 163px; }
-.s84 { top: 585px; left: 163px; }
+/* Hilera Izquierda Única */
+.s87 { top: 510px; left: 182px; } /* 163px + 19px */
+.s86 { top: 535px; left: 182px; }
+.s85 { top: 560px; left: 182px; }
+.s84 { top: 585px; left: 182px; }
 
 /* ==========================================
    ZONA DE ESPERA PROVISIONAL AL FONDO
