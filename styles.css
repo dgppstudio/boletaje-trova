@@ -139,13 +139,13 @@ body {
 /* 2. Alineamos las Mesas Principales centradas bajo el escenario */
 .m5 { 
     top: 65px; 
-    left: 95px; /* Movida a la derecha para centrar el bloque */
+    left: 100px; /* Movida a la derecha para centrar el bloque */
     width: 45px; 
     height: 25px; 
 }
 .m4 { 
     top: 65px; 
-    left: 195px; /* Movida a la derecha para guardar simetría */
+    left: 200px; /* Movida a la derecha para guardar simetría */
     width: 45px; 
     height: 25px; 
 }
@@ -194,6 +194,37 @@ body {
 .s55 { top: 200px; left: 116px; } /* Punta Sur */
 .s56 { top: 180px; left: 135px; } /* Diagonal Noreste */
 .s57 { top: 150px; left: 125px; } /* Punta Este */
+
+/* ==========================================
+   PASILLO IZQUIERDO: MESAS 7, 8 Y 9 (EJE LEFT 100px)
+   ========================================== */
+
+/* --- MESA 7 (Justo abajo de la Mesa 6) --- */
+.m7 { top: 255px; left: 100px; }
+/* 2 Sillas arriba viendo al escenario */
+.s66 { top: 232px; left: 95px; }
+.s67 { top: 232px; left: 115px; }
+/* 2 Sillas abajo */
+.s68 { top: 280px; left: 95px; }
+.s69 { top: 280px; left: 115px; }
+
+/* --- MESA 8 (Siguiente hacia abajo) --- */
+.m8 { top: 345px; left: 100px; }
+/* 2 Sillas arriba */
+.s70 { top: 322px; left: 95px; }
+.s71 { top: 322px; left: 115px; }
+/* 2 Sillas abajo */
+.s72 { top: 370px; left: 95px; }
+.s73 { top: 370px; left: 115px; }
+
+/* --- MESA 9 (Al final de este pasillo) --- */
+.m9 { top: 435px; left: 100px; }
+/* 2 Sillas arriba */
+.s74 { top: 412px; left: 95px; }
+.s75 { top: 412px; left: 115px; }
+/* 2 Sillas abajo */
+.s76 { top: 460px; left: 95px; }
+.s77 { top: 460px; left: 115px; }
 
 /* COMPONENTES DE COMPRA INFERIOR */
 .checkout-bar {
