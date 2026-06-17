@@ -352,8 +352,8 @@ body {
    ========================================== */
 .puerta-acceso {
     position: absolute;
-    top: 610px; /* Corregido para estar dentro de los límites del canvas */
-    left: 40px;
+    top: 460px; /* Corregido para estar dentro de los límites del canvas */
+    left: 200px;
     font-size: 10px;
     font-weight: bold;
     color: #475569;
@@ -365,10 +365,10 @@ body {
 
 .escalera-bloque {
     position: absolute;
-    top: 525px; /* Corregido para convivir de forma limpia junto a B2 y B1 */
-    left: 15px;
-    width: 45px;
-    height: 70px;
+    top: 280px; /* Corregido para convivir de forma limpia junto a B2 y B1 */
+    left: 240px;
+    width: 60px;
+    height: 150px;
     border: 1px solid #94a3b8;
     background: repeating-linear-gradient(
         0deg,
