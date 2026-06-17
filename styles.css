@@ -294,31 +294,31 @@ body {
 .s84 { top: 585px; left: 182px; }
 
 /* ==========================================
-   BARRAS LATERALES: BARRA R1 (ABAJO DE M4)
+   BARRAS LATERALES: BARRA R1 (MOVIDA 20px A LA DERECHA)
    ========================================== */
 
-/* Mesa R1 con las mismas proporciones que R2 y R3, alineada bajo M4 */
+/* Mesa R1 desplazada a su nueva posición */
 .mr1 {
     top: 150px;
-    left: 205px; /* Alineada exacto con M4 */
+    left: 225px; /* 205px + 20px */
     width: 25px;
     height: 95px;
 }
 
 /* LADO DERECHO (Arriba hacia Abajo: 32 al 35) */
-.s32 { top: 150px; left: 235px; }
-.s33 { top: 175px; left: 235px; }
-.s34 { top: 200px; left: 235px; }
-.s35 { top: 225px; left: 235px; }
+.s32 { top: 150px; left: 255px; } /* 235px + 20px */
+.s33 { top: 175px; left: 255px; }
+.s34 { top: 200px; left: 255px; }
+.s35 { top: 225px; left: 255px; }
 
 /* LADO INFERIOR (Silla 36 centrada abajo) */
-.s36 { top: 250px; left: 208px; }
+.s36 { top: 250px; left: 228px; } /* 208px + 20px */
 
 /* LADO IZQUIERDO (Arriba hacia Abajo: 40 al 37) */
-.s40 { top: 150px; left: 182px; }
-.s39 { top: 175px; left: 182px; }
-.s38 { top: 200px; left: 182px; }
-.s37 { top: 225px; left: 182px; }
+.s40 { top: 150px; left: 202px; } /* 182px + 20px */
+.s39 { top: 175px; left: 202px; }
+.s38 { top: 200px; left: 202px; }
+.s37 { top: 225px; left: 202px; }
 
 /* ==========================================
    ZONA DE ESPERA PROVISIONAL AL FONDO
