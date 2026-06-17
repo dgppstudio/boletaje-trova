@@ -248,6 +248,54 @@ body {
 .s88 { top: 410px; left: 190px; }
 .s89 { top: 410px; left: 210px; }
 
+/* ==========================================
+   BARRAS IZQUIERDAS: CUARTO R2 Y BARRA R3
+   ========================================== */
+
+/* --- CUARTO CERRADO R2 --- */
+/* La barra estructural fija a la pared izquierda */
+.mr2 { 
+    top: 60px; 
+    left: 5px; 
+    width: 15px; 
+    height: 165px; 
+}
+
+/* Hilera de 8 sillas (41 al 48) pegadas a la barra R2 */
+.s41 { top: 62px; left: 26px; }
+.s42 { top: 82px; left: 26px; }
+.s43 { top: 102px; left: 26px; }
+.s44 { top: 122px; left: 26px; }
+.s45 { top: 142px; left: 26px; }
+.s46 { top: 162px; left: 26px; }
+.s47 { top: 182px; left: 26px; }
+.s48 { top: 202px; left: 26px; }
+
+/* 3 Sillas (49 al 51) contra el muro derecho del cuartito */
+.s49 { top: 82px; left: 42px; }
+.s50 { top: 102px; left: 42px; }
+.s51 { top: 122px; left: 42px; }
+
+
+/* --- BARRA INFERIOR R3 --- */
+/* Continúa abajo del cuarto R2 */
+.mr3 { 
+    top: 250px; 
+    left: 5px; 
+    width: 15px; 
+    height: 165px; 
+}
+
+/* Hilera de 8 sillas (58 al 65) alineadas verticalmente */
+.s58 { top: 252px; left: 26px; }
+.s59 { top: 272px; left: 26px; }
+.s60 { top: 292px; left: 26px; }
+.s61 { top: 312px; left: 26px; }
+.s62 { top: 332px; left: 26px; }
+.s63 { top: 352px; left: 26px; }
+.s64 { top: 372px; left: 26px; }
+.s65 { top: 392px; left: 26px; }
+
 /* COMPONENTES DE COMPRA INFERIOR */
 .checkout-bar {
     background: white;
