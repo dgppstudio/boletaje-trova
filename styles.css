@@ -136,23 +136,44 @@ body {
    ZONA 1: BLOQUE FRONTAL CENTRAL (CORREGIDO)
    ========================================== */
 
-/* --- MESA 5 (Mesa horizontal alta izquierda) --- */
-.m5 { top: 60px; left: 85px; }
-.s1 { top: 38px; left: 83px; }  /* Arriba izquierda */
-.s2 { top: 38px; left: 103px; } /* Arriba derecha */
-.s3 { top: 61px; left: 62px; }  /* Lateral izquierdo */
-.s4 { top: 83px; left: 93px; }  /* Abajo */
+/* ==========================================
+   ZONA 1: PRIMERA FILA (M5 Y M4) SIN ESPALDAS
+   ========================================== */
 
-/* --- MESA 4 (Mesa horizontal alta derecha) --- */
-.m4 { top: 60px; left: 165px; width: 50px; } /* Un poco más ancha por tener más sillas */
-.s5 { top: 61px; left: 142px; } /* Lateral izquierdo (Silla 5) */
-.s6 { top: 38px; left: 165px; } /* Arriba (Silla 6) */
-.s7 { top: 38px; left: 185px; } /* Arriba (Silla 7) */
-.s8 { top: 38px; left: 205px; } /* Arriba (Silla 8) */
-.s9 { top: 83px; left: 165px; } /* Abajo (Silla 9) */
-.s10 { top: 83px; left: 185px; }/* Abajo (Silla 10) */
-.s11 { top: 61px; left: 220px; }/* Lateral derecho (Silla 11) */
-.s12 { top: 38px; left: 225px; }/* Esquina superior derecha extrema */
+/* --- MESA 5 (Frente Izquierda) --- */
+.m5 { 
+    top: 65px; 
+    left: 70px; 
+    width: 45px; 
+    height: 25px; 
+}
+/* Costado Corto Izquierdo (2 sillas) */
+.s1 { top: 60px; left: 45px; }
+.s2 { top: 80px; left: 45px; }
+/* Costado Corto Derecho (2 sillas) */
+.s3 { top: 60px; left: 120px; }
+.s4 { top: 80px; left: 120px; }
+/* Parte de Abajo (2 sillas viendo al frente) */
+.s5 { top: 95px; left: 73px; }
+.s6 { top: 95px; left: 93px; }
+
+
+/* --- MESA 4 (Frente Derecha) --- */
+.m4 { 
+    top: 65px; 
+    left: 175px; 
+    width: 45px; 
+    height: 25px; 
+}
+/* Costado Corto Izquierdo (2 sillas) */
+.s7 { top: 60px; left: 150px; }
+.s8 { top: 80px; left: 150px; }
+/* Costado Corto Derecho (2 sillas) */
+.s9 { top: 60px; left: 225px; }
+.s10 { top: 80px; left: 225px; }
+/* Parte de Abajo (2 sillas viendo al frente) */
+.s11 { top: 95px; left: 178px; }
+.s12 { top: 95px; left: 198px; }
 
 /* --- MESA 6 (El Rombo Central) --- */
 .m6 { top: 140px; left: 120px; }
