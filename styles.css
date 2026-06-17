@@ -369,6 +369,31 @@ body {
 .s27 { top: 92px; left: 480px; } /* Abajo Izquierda */
 
 /* ==========================================
+   MESAS BIS: PAREJAS INFERIORES (BIS5 Y BIS4)
+   ========================================== */
+
+/* --- MESA BIS5 (Abajo, centrada entre Bis1 y Bis2) --- */
+.mbis5 {
+    top: 160px;
+    left: 355px; /* Posición intermedia debajo de Bis1 y Bis2 */
+    width: 45px;
+    height: 25px;
+}
+.s31 { top: 163px; left: 332px; } /* Izquierda */
+.s30 { top: 163px; left: 405px; } /* Derecha */
+
+
+/* --- MESA BIS4 (Abajo, centrada entre Bis2 y Bis3) --- */
+.mbis4 {
+    top: 160px;
+    left: 450px; /* Posición intermedia debajo de Bis2 y Bis3 */
+    width: 45px;
+    height: 25px;
+}
+.s29 { top: 163px; left: 427px; } /* Izquierda */
+.s28 { top: 163px; left: 500px; } /* Derecha */
+
+/* ==========================================
    BARRA DE DESCRIPCIÓN Y LEYENDAS (FIJA ABAJO)
    ========================================== */
 .checkout-bar {
