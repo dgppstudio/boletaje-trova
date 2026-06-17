@@ -1,20 +1,29 @@
 /* ==========================================
-   CONFIGURACIÓN GENERAL DEL LIENZO
+   CONFIGURACIÓN GENERAL DEL MAPA (LIMPIO)
    ========================================== */
 .canvas-mapa {
     position: relative;
-    width: 380px; /* Mantiene el scroll horizontal */
-    height: 680px;
+    width: 380px;
+    height: 700px;
     margin: 0 auto;
-    background-color: #ffffff; /* Fondo claro para los pasillos */
-    border: 2px solid #333;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
 }
 
-/* Elementos Base */
+/* Estilos de Texto del Encabezado (si es que están dentro del canvas) */
+h1, h2, .titulo-app {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* ==========================================
+   ESTILOS BASE DE OBJETOS
+   ========================================== */
 .mesa {
     position: absolute;
     background-color: #1e293b;
-    color: #fff;
+    color: #ffffff;
     font-family: Arial, sans-serif;
     font-size: 10px;
     font-weight: bold;
@@ -22,15 +31,15 @@
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    z-index: 2;
+    z-index: 10;
 }
 
 .silla {
     position: absolute;
-    width: 16px;
-    height: 16px;
-    background-color: #28a745;
-    color: white;
+    width: 18px;
+    height: 18px;
+    background-color: #248a3d;
+    color: #ffffff;
     font-family: Arial, sans-serif;
     font-size: 9px;
     font-weight: bold;
@@ -38,19 +47,16 @@
     align-items: center;
     justify-content: center;
     border-radius: 3px;
-    cursor: pointer;
-    z-index: 3;
+    z-index: 20;
 }
 
-/* Tamaños por clase */
+/* Modificadores de forma */
 .mesa.h { width: 45px; height: 25px; }
-.mesa.v { width: 25px; height: 45px; } /* Regla general */
+.mesa.v { width: 25px; height: 45px; }
 .mesa.rombo { width: 26px; height: 26px; transform: rotate(45deg); }
 .mesa.rombo span { transform: rotate(-45deg); }
 
-/* ==========================================
-   MUROS ESTRUCTURALES
-   ========================================== */
+/* LÍNEAS DE PAREDES DE LA IZQUIERDA */
 .muro-izq {
     position: absolute;
     top: 48px;
@@ -62,30 +68,30 @@
 .muro-separador-r2 {
     position: absolute;
     top: 48px;
-    left: 55px;
+    left: 70px;
     width: 4px;
     height: 185px;
     background-color: #cbd5e1;
 }
 
 /* ==========================================
-   ESCENARIO Y ZONA FRONTAL (TU ALINEACIÓN)
+   ESCENARIO Y BLOQUE FRONTAL (TU ALINEACIÓN)
    ========================================== */
 .stage-box {
     position: absolute;
-    top: 0;
-    left: 75px; /* Tu ajuste exacto */
+    top: 5px;
+    left: 75px;
     width: 180px;
     height: 35px;
     background-color: #000033;
-    color: #fff;
+    color: #ffffff;
     font-family: Arial, sans-serif;
     font-size: 12px;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-    letter-spacing: 2px;
+    border-radius: 4px;
 }
 
 /* --- MESA 5 --- */
@@ -103,8 +109,8 @@
 .s8 { top: 80px; left: 170px; }
 .s9 { top: 60px; left: 245px; }
 .s10 { top: 80px; left: 245px; }
-.s11 { top: 105px; left: 198px; }
-.s12 { top: 105px; left: 218px; }
+.s11 { top: 95px; left: 198px; }
+.s12 { top: 95px; left: 218px; }
 
 /* --- MESA 6 (Rombo) --- */
 .m6 { top: 165px; left: 100px; }
@@ -119,30 +125,29 @@
    PASILLOS CENTRALES
    ========================================== */
 .m7 { top: 255px; left: 100px; }
-.s66 { top: 232px; left: 95px; } .s67 { top: 232px; left: 115px; }
-.s68 { top: 280px; left: 95px; } .s69 { top: 280px; left: 115px; }
+.s66 { top: 232px; left: 95px; }   .s67 { top: 232px; left: 115px; }
+.s68 { top: 280px; left: 95px; }   .s69 { top: 280px; left: 115px; }
 
 .m8 { top: 345px; left: 100px; }
-.s70 { top: 322px; left: 95px; } .s71 { top: 322px; left: 115px; }
-.s72 { top: 370px; left: 95px; } .s73 { top: 370px; left: 115px; }
+.s70 { top: 322px; left: 95px; }   .s71 { top: 322px; left: 115px; }
+.s72 { top: 370px; left: 95px; }   .s73 { top: 370px; left: 115px; }
 
 .m9 { top: 435px; left: 100px; }
-.s74 { top: 412px; left: 95px; } .s75 { top: 412px; left: 115px; }
-.s76 { top: 460px; left: 95px; } .s77 { top: 460px; left: 115px; }
+.s74 { top: 412px; left: 95px; }   .s75 { top: 412px; left: 115px; }
+.s76 { top: 460px; left: 95px; }   .s77 { top: 460px; left: 115px; }
 
 .m3 { top: 295px; left: 195px; }
-.s94 { top: 272px; left: 190px; } .s95 { top: 272px; left: 210px; }
-.s92 { top: 320px; left: 190px; } .s93 { top: 320px; left: 210px; }
+.s94 { top: 272px; left: 190px; }  .s95 { top: 272px; left: 210px; }
+.s92 { top: 320px; left: 190px; }  .s93 { top: 320px; left: 210px; }
 
 .m2 { top: 385px; left: 195px; }
-.s90 { top: 362px; left: 190px; } .s91 { top: 362px; left: 210px; }
-.s88 { top: 410px; left: 190px; } .s89 { top: 410px; left: 210px; }
+.s90 { top: 362px; left: 190px; }  .s91 { top: 362px; left: 210px; }
+.s88 { top: 410px; left: 190px; }  .s89 { top: 410px; left: 210px; }
 
 /* ==========================================
-   BARRAS IZQUIERDAS (SOLUCIÓN ESPECÍFICA)
+   BARRAS LATERALES IZQUIERDAS COHERENTES
    ========================================== */
-/* Usamos el ID o la clase directa ignorando el .v genérico para que no colisione */
-#R2, .mr2 { top: 60px; left: 5px; width: 35px !important; height: 165px !important; }
+.mr2 { top: 60px; left: 10px; width: 30px; height: 165px; }
 .s41 { top: 62px;  left: 45px; }
 .s42 { top: 82px;  left: 45px; }
 .s43 { top: 102px; left: 45px; }
@@ -151,11 +156,12 @@
 .s46 { top: 162px; left: 45px; }
 .s47 { top: 182px; left: 45px; }
 .s48 { top: 202px; left: 45px; }
-.s49 { top: 75px;  left: 68px; }
-.s50 { top: 115px; left: 68px; }
-.s51 { top: 155px; left: 68px; }
 
-#R3, .mr3 { top: 250px; left: 5px; width: 35px !important; height: 165px !important; }
+.s49 { top: 82px;  left: 78px; }
+.s50 { top: 122px; left: 78px; }
+.s51 { top: 162px; left: 78px; }
+
+.mr3 { top: 250px; left: 10px; width: 30px; height: 165px; }
 .s58 { top: 252px; left: 45px; }
 .s59 { top: 272px; left: 45px; }
 .s60 { top: 292px; left: 45px; }
@@ -166,11 +172,11 @@
 .s65 { top: 392px; left: 45px; }
 
 /* ==========================================
-   ZONA DE ESPERA AL FONDO (SIN ESTORBAR)
+   MANDAR LO DEMÁS PROVISIONALMENTE AL FONDO
    ========================================== */
 .mbis1, .mbis2, .mbis3, .mbis4, .mbis5, .mr1, .mb1, .mb2,
 [class^="silla s13"], [class^="silla s14"], [class^="silla s15"], [class^="silla s16"], [class^="silla s17"],
 [class^="silla s18"], [class^="silla s19"], [class^="silla s2"], [class^="silla s3"] {
-    top: 550px;
-    left: 20px;
+    top: 600px;
+    left: 280px;
 }
