@@ -1,17 +1,9 @@
-:root {
-    --primary: #000033;
-    --accent: #eb5e28;
-    --disponible: #008744;
-    --seleccionado: #f1c40f;
-    --ocupado: #d32f2f;
-    --bg-body: #0f172a;
-}
-
-* { box-sizing: border-box; }
-
+/* ==========================================
+   CONFIGURACIÓN GENERAL (MOCKUP MÓVIL)
+   ========================================== */
 body {
     font-family: 'Lato', sans-serif;
-    background-color: var(--bg-body);
+    background-color: #0f172a;
     margin: 0;
     padding: 10px;
     display: flex;
@@ -31,7 +23,7 @@ body {
 }
 
 .app-header {
-    background-color: var(--primary);
+    background-color: #000033;
     color: white;
     padding: 12px;
     text-align: center;
@@ -46,33 +38,17 @@ body {
     padding: 10px;
 }
 
-/* Lienzo amplio y estructurado para distribución limpia */
-.canvas-plano {
+.canvas-mapa {
     width: 380px;
-    height: 600px;
+    height: 680px; /* Incrementado para dar espacio al fondo */
     position: relative;
     margin: 0 auto;
+    background-color: #ffffff;
 }
 
-.stage-box {
-    position: absolute;
-    top: 0;
-    left: 75px;
-    width: 180px;
-    height: 35px;
-    background-color: var(--primary);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Urbanist', sans-serif;
-    font-weight: bold;
-    font-size: 13px;
-    letter-spacing: 2px;
-    border-radius: 4px;
-}
-
-/* MUROS ESTRUCTURALES */
+/* ==========================================
+   MUROS ESTRUCTURALES
+   ========================================== */
 .muro-izq {
     position: absolute;
     top: 48px;
@@ -90,213 +66,159 @@ body {
     background-color: #cbd5e1;
 }
 
-/* ELEMENTOS DEL PLANO (Mesas Compactas para Evitar Traslapes) */
+/* ==========================================
+   ESTILOS BASE: MESAS Y SILLAS
+   ========================================== */
 .mesa {
     position: absolute;
     background-color: #1e293b;
     color: white;
+    font-family: Arial, sans-serif;
     font-size: 9px;
     font-weight: bold;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     border-radius: 3px;
+    z-index: 2;
 }
 
-.mesa.v { width: 20px; height: 35px; }
-.mesa.h { width: 35px; height: 20px; }
-.mesa.rombo { width: 26px; height: 26px; transform: rotate(45deg); }
-.mesa.rombo span { transform: rotate(-45deg); }
-
-/* SILLAS INTERACTIVAS */
 .silla {
     position: absolute;
     width: 18px;
     height: 18px;
-    background-color: var(--disponible);
+    background-color: #008744;
     color: white;
+    font-family: Arial, sans-serif;
     font-size: 8px;
     font-weight: bold;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     border-radius: 3px;
     cursor: pointer;
-    user-select: none;
-    transition: all 0.15s ease;
+    z-index: 3;
 }
-.silla:active { transform: scale(0.85); }
-.silla.selected { background-color: var(--seleccionado); color: #000; box-shadow: 0 0 6px var(--seleccionado); }
-.silla.occupied { background-color: var(--ocupado); cursor: not-allowed; opacity: 0.6; }
 
-/* COORDINADAS LÓGICAS INTERNAS */
-.r2-box { position: absolute; top: 65px; left: 5px; width: 15px; height: 160px; background: #64748b; color: white; font-size: 8px; display: flex; align-items: center; justify-content: center; border-radius: 2px; }
+/* Clases de Orientación Base */
+.mesa.h { width: 35px; height: 20px; }
+.mesa.v { width: 20px; height: 35px; }
+.mesa.rombo { width: 26px; height: 26px; transform: rotate(45deg); }
+.mesa.rombo span { transform: rotate(-45deg); }
+
+/* Escenario */
+.stage-box {
+    position: absolute;
+    top: 0;
+    left: 75px;
+    width: 180px;
+    height: 35px;
+    background-color: #000033;
+    color: #fff;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    letter-spacing: 2px;
+}
 
 /* ==========================================
-   ZONA 1: CENTRADO FRONTAL (ESCENARIO, M5, M4)
+   ZONA 1: BLOQUE FRONTAL CENTRAL
    ========================================== */
-
-/* 2. Alineamos las Mesas Principales centradas bajo el escenario */
-.m5 { 
-    top: 65px; 
-    left: 100px; /* Movida a la derecha para centrar el bloque */
-    width: 45px; 
-    height: 25px; 
-}
-.m4 { 
-    top: 65px; 
-    left: 200px; /* Movida a la derecha para guardar simetría */
-    width: 45px; 
-    height: 25px; 
-}
-
-/* 3. Reacomodo Simétrico de sus Sillas (Respetando inventario y UX) */
-
-/* --- Sillas de MESA 5 (Centradas bajo M5) --- */
-/* Costado Corto Izquierdo (2 sillas) */
+.m5 { top: 65px; left: 95px; }
 .s1 { top: 60px; left: 70px; }
 .s2 { top: 80px; left: 70px; }
-/* Costado Corto Derecho (2 sillas) */
-.s3 { top: 95px; left: 98px; }
-.s4 { top: 95px; left: 118px; }
-/* Parte de Abajo (2 sillas viendo al frente) */
-.s5 { top: 80px; left: 145px; }
-.s6 { top: 60px; left: 145px; }
+.s3 { top: 60px; left: 145px; }
+.s4 { top: 80px; left: 145px; }
+.s5 { top: 95px; left: 98px; }
+.s6 { top: 95px; left: 118px; }
 
-/* --- Sillas de MESA 4 (Centradas bajo M4) --- */
-/* Costado Corto Izquierdo (2 sillas) */
+.m4 { top: 65px; left: 195px; }
 .s7 { top: 60px; left: 170px; }
 .s8 { top: 80px; left: 170px; }
-/* Costado Corto Derecho (2 sillas) */
-.s9 { top: 95px; left: 198px; }
-.s10 { top: 95px; left: 218px; }
-/* Parte de Abajo (2 sillas viendo al frente) */
-.s11 { top: 80px; left: 245px; }
-.s12 { top: 60px; left: 245px; }
+.s9 { top: 60px; left: 245px; }
+.s10 { top: 80px; left: 245px; }
+.s11 { top: 105px; left: 198px; }
+.s12 { top: 105px; left: 218px; }
+
+.m6 { top: 165px; left: 100px; }
+.s52 { top: 135px; left: 104px; }
+.s53 { top: 168px; left: 70px; }
+.s54 { top: 195px; left: 80px; }
+.s55 { top: 205px; left: 104px; }
+.s56 { top: 145px; left: 128px; }
+.s57 { top: 168px; left: 140px; }
 
 /* ==========================================
-   ZONA 1: CENTRADO DEL ROMBO CENTRAL (M6)
+   PASILLOS CENTRALES (IZQUIERDO Y DERECHO)
    ========================================== */
-
-/* --- MESA 6 (Rombo Central - Movido a Left 100px) --- */
-.m6 { 
-    top: 165px; 
-    left: 100px; /* Movida a tu coordenada exacta */
-    width: 26px; 
-    height: 26px; 
-    transform: rotate(45deg); 
-}
-
-/* Sillas recalculadas simétricamente desde el nuevo eje (100px) */
-.s52 { top: 150px; left: 85px; } /* Punta Norte */
-.s53 { top: 180px; left: 75px;  } /* Punta Oeste */
-.s54 { top: 200px; left: 92px;  } /* Diagonal Suroeste */
-.s55 { top: 200px; left: 116px; } /* Punta Sur */
-.s56 { top: 180px; left: 135px; } /* Diagonal Noreste */
-.s57 { top: 150px; left: 125px; } /* Punta Este */
-
-/* ==========================================
-   PASILLO IZQUIERDO: MESAS 7, 8 Y 9 (EJE LEFT 100px)
-   ========================================== */
-
-/* --- MESA 7 (Justo abajo de la Mesa 6) --- */
 .m7 { top: 255px; left: 100px; }
-/* 2 Sillas arriba viendo al escenario */
-.s66 { top: 232px; left: 95px; }
-.s67 { top: 232px; left: 115px; }
-/* 2 Sillas abajo */
-.s68 { top: 280px; left: 95px; }
-.s69 { top: 280px; left: 115px; }
+.s66 { top: 232px; left: 95px; } .s67 { top: 232px; left: 115px; }
+.s68 { top: 280px; left: 95px; } .s69 { top: 280px; left: 115px; }
 
-/* --- MESA 8 (Siguiente hacia abajo) --- */
 .m8 { top: 345px; left: 100px; }
-/* 2 Sillas arriba */
-.s70 { top: 322px; left: 95px; }
-.s71 { top: 322px; left: 115px; }
-/* 2 Sillas abajo */
-.s72 { top: 370px; left: 95px; }
-.s73 { top: 370px; left: 115px; }
+.s70 { top: 322px; left: 95px; } .s71 { top: 322px; left: 115px; }
+.s72 { top: 370px; left: 95px; } .s73 { top: 370px; left: 115px; }
 
-/* --- MESA 9 (Al final de este pasillo) --- */
 .m9 { top: 435px; left: 100px; }
-/* 2 Sillas arriba */
-.s74 { top: 412px; left: 95px; }
-.s75 { top: 412px; left: 115px; }
-/* 2 Sillas abajo */
-.s76 { top: 460px; left: 95px; }
-.s77 { top: 460px; left: 115px; }
+.s74 { top: 412px; left: 95px; } .s75 { top: 412px; left: 115px; }
+.s76 { top: 460px; left: 95px; } .s77 { top: 460px; left: 115px; }
 
-/* ==========================================
-   PASILLO DERECHO: MESAS 3 Y 2 (EJE LEFT 195px)
-   ========================================== */
-
-/* --- MESA 3 (Frente a las escaleras / Pasillo Derecho) --- */
 .m3 { top: 295px; left: 195px; }
-/* 2 Sillas arriba */
-.s94 { top: 272px; left: 190px; }
-.s95 { top: 272px; left: 210px; }
-/* 2 Sillas abajo */
-.s92 { top: 320px; left: 190px; }
-.s93 { top: 320px; left: 210px; }
+.s94 { top: 272px; left: 190px; } .s95 { top: 272px; left: 210px; }
+.s92 { top: 320px; left: 190px; } .s93 { top: 320px; left: 210px; }
 
-/* --- MESA 2 (Abajo de la Mesa 3) --- */
 .m2 { top: 385px; left: 195px; }
-/* 2 Sillas arriba */
-.s90 { top: 362px; left: 190px; }
-.s91 { top: 362px; left: 210px; }
-/* 2 Sillas abajo */
-.s88 { top: 410px; left: 190px; }
-.s89 { top: 410px; left: 210px; }
+.s90 { top: 362px; left: 190px; } .s91 { top: 362px; left: 210px; }
+.s88 { top: 410px; left: 190px; } .s89 { top: 410px; left: 210px; }
 
 /* ==========================================
-   BARRAS IZQUIERDAS: CUARTO R2 Y BARRA R3 (CORREGIDO)
+   BARRAS IZQUIERDAS CORREGIDAS (¡FUERZA DE ANCHO!)
    ========================================== */
 
-/* --- CUARTO CERRADO R2 --- */
-/* Hacemos la barra más ancha (35px) para que parezca una barra real */
-.mr2 { 
-    top: 60px; 
-    left: 5px; 
-    width: 35px; 
-    height: 165px; 
+/* Usamos !important para ganarle a la herencia general y fijar el tamaño real */
+.mr2 { top: 60px; left: 5px; width: 35px !important; height: 165px !important; }
+
+.s41 { top: 62px;  left: 45px; }
+.s42 { top: 82px;  left: 45px; }
+.s43 { top: 102px; left: 45px; }
+.s44 { top: 122px; left: 45px; }
+.s45 { top: 142px; left: 45px; }
+.s46 { top: 162px; left: 45px; }
+.s47 { top: 182px; left: 45px; }
+.s48 { top: 202px; left: 45px; }
+
+.s49 { top: 75px;  left: 68px; }
+.s50 { top: 115px; left: 68px; }
+.s51 { top: 155px; left: 68px; }
+
+.mr3 { top: 250px; left: 5px; width: 35px !important; height: 165px !important; }
+
+.s58 { top: 252px; left: 45px; }
+.s59 { top: 272px; left: 45px; }
+.s60 { top: 292px; left: 45px; }
+.s61 { top: 312px; left: 45px; }
+.s62 { top: 332px; left: 45px; }
+.s63 { top: 352px; left: 45px; }
+.s64 { top: 372px; left: 45px; }
+.s65 { top: 392px; left: 45px; }
+
+/* ==========================================
+   ZONA DE ESPERA (PROVISIONAL AL FONDO)
+   ========================================== */
+/* Mandamos todo lo que falta por acomodar al fondo del lienzo para limpiar el rincón */
+.mbis1, .mbis2, .mbis3, .mbis4, .mbis5, .mr1, .mb1, .mb2,
+[class^="silla s1"], [class^="silla s2"], [class^="silla s3"] {
+    top: 550px;
+    left: 20px;
 }
 
-/* Hilera de 8 sillas (41 al 48) con separación real para que no se encimen */
-.s41 { top: 62px;  left: 48px; }
-.s42 { top: 82px;  left: 48px; }
-.s43 { top: 102px; left: 48px; }
-.s44 { top: 122px; left: 48px; }
-.s45 { top: 142px; left: 48px; }
-.s46 { top: 162px; left: 48px; }
-.s47 { top: 182px; left: 48px; }
-.s48 { top: 202px; left: 48px; }
-
-/* 3 Sillas (49 al 51) distribuidas contra el muro derecho interno */
-.s49 { top: 75px;  left: 75px; }
-.s50 { top: 115px; left: 75px; }
-.s51 { top: 155px; left: 75px; }
-
-
-/* --- BARRA INFERIOR R3 --- */
-/* Hacemos la barra igual de ancha (35px) */
-.mr3 { 
-    top: 250px; 
-    left: 5px; 
-    width: 35px; 
-    height: 165px; 
-}
-
-/* Hilera de 8 sillas (58 al 65) perfectamente espaciadas cada 20px */
-.s58 { top: 252px; left: 48px; }
-.s59 { top: 272px; left: 48px; }
-.s60 { top: 292px; left: 48px; }
-.s61 { top: 312px; left: 48px; }
-.s62 { top: 332px; left: 48px; }
-.s63 { top: 352px; left: 48px; }
-.s64 { top: 372px; left: 48px; }
-.s65 { top: 392px; left: 48px; }
-
-/* COMPONENTES DE COMPRA INFERIOR */
+/* ==========================================
+   COMPONENTES DE COMPRA INFERIOR
+   ========================================== */
 .checkout-bar {
     background: white;
     border-top: 1px solid #e2e8f0;
@@ -308,18 +230,3 @@ body {
 .legend-bar { display: flex; justify-content: space-around; font-size: 10px; color: #64748b; }
 .legend-i { display: flex; align-items: center; gap: 4px; }
 .legend-c { width: 10px; height: 10px; border-radius: 2px; }
-
-.btn-reservation {
-    background-color: var(--accent);
-    color: white;
-    text-align: center;
-    padding: 12px;
-    border-radius: 10px;
-    font-weight: bold;
-    border: none;
-    width: 100%;
-    display: none;
-    font-size: 13px;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(235, 94, 40, 0.2);
-}
