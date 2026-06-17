@@ -202,30 +202,35 @@ body {
 .s88 { top: 410px; left: 190px; }  .s89 { top: 410px; left: 210px; }
 
 /* ==========================================
-   BARRAS LATERALES IZQUIERDAS
+   BARRAS LATERALES: CUARTO R2 REORGANIZADO
    ========================================== */
-.mr2 { top: 60px; left: 10px; width: 30px !important; height: 165px !important; }
-.s41 { top: 62px;  left: 45px; }
-.s42 { top: 82px;  left: 45px; }
-.s43 { top: 102px; left: 45px; }
-.s44 { top: 122px; left: 45px; }
-.s45 { top: 142px; left: 45px; }
-.s46 { top: 162px; left: 45px; }
-.s47 { top: 182px; left: 45px; }
-.s48 { top: 202px; left: 45px; }
-.s49 { top: 82px;  left: 78px; }
-.s50 { top: 122px; left: 78px; }
-.s51 { top: 162px; left: 78px; }
 
-.mr3 { top: 250px; left: 10px; width: 30px !important; height: 165px !important; }
-.s58 { top: 252px; left: 45px; }
-.s59 { top: 272px; left: 45px; }
-.s60 { top: 292px; left: 45px; }
-.s61 { top: 312px; left: 45px; }
-.s62 { top: 332px; left: 45px; }
-.s63 { top: 352px; left: 45px; }
-.s64 { top: 372px; left: 45px; }
-.s65 { top: 392px; left: 45px; }
+/* La barra/mesa R2 centrada en su espacio */
+.mr2 { 
+    top: 75px; 
+    left: 25px; 
+    width: 45px; !important; /* La hacemos estilo mesa ancha */
+    height: 95px; !important; 
+}
+
+/* LADO SUPERIOR (Izquierda a Derecha) */
+.s41 { top: 52px; left: 22px; }
+.s42 { top: 52px; left: 45px; }
+
+/* LADO IZQUIERDO (Arriba hacia Abajo) */
+.s43 { top: 75px;  left: 2px; }
+.s44 { top: 95px;  left: 2px; }
+.s45 { top: 115px; left: 2px; }
+.s46 { top: 135px; left: 2px; }
+
+/* LADO INFERIOR (Izquierda a Derecha) */
+.s47 { top: 175px; left: 22px; }
+.s48 { top: 175px; left: 45px; }
+
+/* LADO DERECHO (Arriba hacia Abajo: 51, 50, 49) */
+.s51 { top: 75px;  left: 75px; }
+.s50 { top: 105px; left: 75px; }
+.s49 { top: 135px; left: 75px; }
 
 /* ==========================================
    ZONA DE ESPERA PROVISIONAL AL FONDO
