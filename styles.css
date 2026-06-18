@@ -173,7 +173,7 @@ body {
 /* Línea vertical que baja por todo el extremo izquierdo de B2 */
 .mi-b2-izq { top: 490px; left: 0; width: 4px; height: 140px; }
 /* Línea de fondo del establecimiento (abajo de B2 y pasillo) */
-.mi-b2-fondo { top: 610px; left: 80px; width: 155px; height: 4px; }
+.mi-b2-fondo { top: 610px; left: 80px; width: 157px; height: 4px; }
 
 /* --- MUROS COSTADO DERECHO Y ACCESO --- */
 /* Techo horizontal abajo de Bis4/Bis5 */
@@ -183,7 +183,7 @@ body {
 /* Pared larga que corre a la derecha de la escalera hasta la entrada */
 .md-escalera-der { top: 190px; left: 300px; width: 4px; height: 425px; }
 /* Pared corta que corre a la izquierda de la escalera hasta la B1 */
-.md-escalera-izq { top: 400px; left: 260px; width: 4px; height: 75px; }
+.md-escalera-izq { top: 494px; left: 235px; width: 4px; height: 120px; }
 /* Muro rojo vertical que abraza a la mesa B1 (atrás de las sillas 84-87) */
 .md-b1-izq { top: 490px; left: 232px; width: 4px; height: 124px; }
 
@@ -429,7 +429,7 @@ body {
    ========================================== */
 .puerta-acceso {
     position: absolute;
-    top: 450px; /* Corregido para estar dentro de los límites del canvas */
+    top: 460px; /* Corregido para estar dentro de los límites del canvas */
     left: 165px;
     font-size: 10px;
     font-weight: bold;
