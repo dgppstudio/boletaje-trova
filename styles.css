@@ -164,7 +164,7 @@ body {
 /* Quiebre horizontal abajo de R2 */
 .ml-r2-bajo { top: 196px; left: 0; width: 75px; height: 2px; }
 /* Muro rojo corto divisorio entre R3 y M6/M7 */
-.ml-m6-separador { top: 275px; left: 75px; width: 4px; height: 25px; }
+.ml-m6-separador { top: 230px; left: 75px; width: 4px; height: 70px; }
 /* Quiebre horizontal abajo de R3 (arriba de silla 70) */
 .ml-r3-bajo { top: 490px; left: 0; width: 100px; height: 4px; }
 
