@@ -52,11 +52,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Acción al hacer clic en el botón de Compra Verde
-btnComprar.addEventListener('click', () => {
-    const listaIds = [...asientosSeleccionados].sort((a, b) => a - b).join(', ');
-    
-    // Aquí puedes enlazar la apertura del PDF o crear un contenedor flotante en tu HTML:
-    alert(`🎫 ¡RESERVA CONFIRMADA!\n\nAsientos: [ ${listaIds} ]\n\nSe ha generado tu boleto digital con código de acceso QR para validación en puerta.`);
-});
+  // Acción al hacer clic en el botón de Compra Verde
+    const modalBoleto = document.getElementById('modal-boleto');
+    const boletoAsientos = document.getElementById('boleto-asientos');
+    const boletoQr = document.getElementById('boleto-qr');
+    const btnCerrarModal = document.getElementById('btn-cerrar-modal');
+
+    btnComprar.addEventListener('click', () => {
+        const listaIds = [...asientosSeleccionados].sort((a, b) => a - b).join(', ');
+        
+        // 1. Inyectamos los asientos en el diseño del boleto
+        boletoAsientos.innerText = `Asientos: ${listaIds}`;
+        
+        // 2. Generamos un QR real que contiene el texto de los asientos comprados
+        const textoQR = encodeURIComponent(`Reserva Trova - Asientos: ${listaIds}`);
+        boletoQr.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${textoQR}`;
+        
+        // 3. Mostramos el modal en la pantalla del celular simulado
+        modalBoleto.style.display = 'flex';
+    });
+
+    // Evento para cerrar el boleto y seguir navegando
+    btnCerrarModal.addEventListener('click', () => {
+        modalBoleto.style.display = 'none';
+    });
 });
