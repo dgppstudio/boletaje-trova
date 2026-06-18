@@ -28,7 +28,6 @@
                 <div class="muro-p mi-b2-fondo"></div>
                 <div class="muro-p md-bis4-bajo"></div>
                 <div class="muro-p md-escalera-der"></div>
-                <div class="muro-p md-b1-izq"></div>
 
                 <div class="mesa h m5">M5</div>
                 <div class="silla s1" data-id="1">1</div><div class="silla s2" data-id="2">2</div>
@@ -96,13 +95,17 @@
 
         <div class="checkout-bar">
             <div id="checkout-resumen" style="font-size: 13px; font-weight: bold; color: #1e293b; text-align: center; margin-bottom: 5px;">
-                Asientos: Ninguno | Total: $0
+                Selecciona un asiento para comenzar
             </div>
             
+            <button id="btn-comprar" style="display: none; width: 100%; background-color: #000033; color: #ffffff; border: none; padding: 15px; border-radius: 12px; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; margin-bottom: 5px;">
+                Comprar 1 Asistencia ($250)
+            </button>
+            
             <div class="legend-bar">
-                <div class="legend-i"><div class="legend-c libre"></div><span>Libre</span></div>
-                <div class="legend-i"><div class="legend-c tuyol"></div><span>Tu Lugar</span></div>
-                <div class="legend-i"><div class="legend-c vendido"></div><span>Obstruido / Vendido</span></div>
+                <div class="legend-i"><div class="legend-c libre" style="background-color: #64748b;"></div><span>Libre</span></div>
+                <div class="legend-i"><div class="legend-c tuyol" style="background-color: #10b981;"></div><span>Tu Lugar</span></div>
+                <div class="legend-i"><div class="legend-c vendido" style="background-color: #e2e8f0;"></div><span>Vendido</span></div>
             </div>
         </div>
     </div>
