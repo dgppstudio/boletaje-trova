@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resumenTxt = document.getElementById('checkout-resumen');
     const btnComprar = document.getElementById('btn-comprar');
     
-    const PRECIO_ASIENTO = 250; // Ajusta el costo por boleto aquí
+    const PRECIO_ASIENTO = 350; // Ajusta el costo por boleto aquí
     let asientosSeleccionados = [];
 
     function actualizarCheckout() {
