@@ -147,9 +147,10 @@ body {
    ========================================== */
 .muro-p {
     position: absolute;
-    background-color: #cbd5e1; /* Gris sutil de la propuesta */
+    background-color: #cbd5e1; 
     border-radius: 2px;
-    z-index: 5; /* Detrás de las sillas y mesas */
+    z-index: 1; /* Bajamos el z-index para que esté al fondo */
+    pointer-events: none; /* ¡ESTA LÍNEA LIBERA LOS CLICS! El dedo pasará directo a las sillas */
 }
 
 /* --- MUROS SUPERIORES --- */
