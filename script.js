@@ -52,9 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Acción al hacer clic en el botón de Compra
-    btnComprar.addEventListener('click', () => {
-        const listaIds = [...asientosSeleccionados].sort((a, b) => a - b).join(', ');
-        alert(`¡Gracias por tu compra!\nAsientos reservados: ${listaIds}`);
-    });
+    // Acción al hacer clic en el botón de Compra Verde
+btnComprar.addEventListener('click', () => {
+    const listaIds = [...asientosSeleccionados].sort((a, b) => a - b).join(', ');
+    
+    // Aquí puedes enlazar la apertura del PDF o crear un contenedor flotante en tu HTML:
+    alert(`🎫 ¡RESERVA CONFIRMADA!\n\nAsientos: [ ${listaIds} ]\n\nSe ha generado tu boleto digital con código de acceso QR para validación en puerta.`);
+});
 });
