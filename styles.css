@@ -498,3 +498,29 @@ body {
 .legend-c.libre { background-color: #64748B; }
 .legend-c.tuyol { background-color: #10B981; }
 .legend-c.vendido { background-color: #E2E8F0; }
+
+/* ==========================================
+   BOTÓN COMPRAR VERDE
+   ========================================== */
+
+#btn-comprar {
+    display: none; 
+    width: 100%; 
+    background-color: #10b981; /* Cambiado al verde esmeralda interactivo */
+    color: #ffffff; 
+    border: none; 
+    padding: 15px; 
+    border-radius: 12px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    cursor: pointer; 
+    margin-bottom: 5px;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); /* Sombra sutil para darle volumen */
+    transition: background-color 0.2s ease;
+}
+
+#btn-comprar:active {
+    background-color: #059669; /* Un tono un poco más oscuro al presionar en el cel */
+}
