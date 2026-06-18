@@ -182,6 +182,8 @@ body {
 .md-r1-der { top: 220px; left: 300px; width: 4px; height: 115px; }
 /* Pared larga que corre a la derecha de la escalera hasta la entrada */
 .md-escalera-der { top: 190px; left: 300px; width: 4px; height: 425px; }
+/* Pared corta que corre a la izquierda de la escalera hasta la B1 */
+.md-escalera-izq { top: 400px; left: 260px; width: 4px; height: 75px; }
 /* Muro rojo vertical que abraza a la mesa B1 (atrás de las sillas 84-87) */
 .md-b1-izq { top: 490px; left: 232px; width: 4px; height: 124px; }
 
