@@ -135,10 +135,10 @@ body {
 
 .muro-separador-r2 {
     position: absolute;
-    top: 200px;
-    left: 75px;
+    top: 350px;
+    left: 78px;
     width: 4px;
-    height: 185px;
+    height: 264px;
     background-color: #cbd5e1;
 }
 
@@ -154,15 +154,15 @@ body {
 
 /* --- MUROS SUPERIORES --- */
 /* Línea horizontal arriba de R2 (izq del escenario) */
-.ms-izq { top: 45px; left: 0; width: 80px; height: 4px; }
+.ms-izq { top: 350px; left: 0; width: 80px; height: 4px; }
 /* Línea horizontal arriba de las Bis (der del escenario) */
-.ms-der { top: 45px; left: 300px; width: 280px; height: 4px; }
+.ms-der { top: 30px; left: 280px; width: 280px; height: 4px; }
 
 /* --- MUROS ZONA R2 Y R3 (IZQUIERDA) --- */
 /* Línea vertical a la izquierda de R2 */
 .ml-r2-izq { top: 45px; left: 0; width: 4px; height: 155px; }
 /* Quiebre horizontal abajo de R2 */
-.ml-r2-bajo { top: 200px; left: 0; width: 75px; height: 4px; }
+.ml-r2-bajo { top: 196px; left: 0; width: 75px; height: 2px; }
 /* Muro rojo corto divisorio entre R3 y M6/M7 */
 .ml-m6-separador { top: 275px; left: 75px; width: 4px; height: 25px; }
 /* Quiebre horizontal abajo de R3 (arriba de silla 70) */
@@ -172,17 +172,17 @@ body {
 /* Línea vertical que baja por todo el extremo izquierdo de B2 */
 .mi-b2-izq { top: 490px; left: 0; width: 4px; height: 140px; }
 /* Línea de fondo del establecimiento (abajo de B2 y pasillo) */
-.mi-b2-fondo { top: 630px; left: 0; width: 215px; height: 4px; }
+.mi-b2-fondo { top: 610px; left: 80; width: 155px; height: 4px; }
 
 /* --- MUROS COSTADO DERECHO Y ACCESO --- */
 /* Techo horizontal abajo de Bis4/Bis5 */
-.md-bis4-bajo { top: 220px; left: 300px; width: 280px; height: 4px; }
+.md-bis4-bajo { top: 190px; left: 300px; width: 260px; height: 4px; }
 /* Línea vertical pegada a las sillas derechas de R1 */
 .md-r1-der { top: 220px; left: 300px; width: 4px; height: 115px; }
 /* Pared larga que corre a la derecha de la escalera hasta la entrada */
 .md-escalera-der { top: 335px; left: 300px; width: 4px; height: 210px; }
 /* Muro rojo vertical que abraza a la mesa B1 (atrás de las sillas 84-87) */
-.md-b1-izq { top: 490px; left: 232px; width: 4px; height: 140px; }
+.md-b1-izq { top: 490px; left: 232px; width: 4px; height: 124px; }
 
 /* ==========================================
    ZONA 1: AJUSTES FRONTALES Y NUMERACIÓN
@@ -334,23 +334,29 @@ body {
 .s84 { top: 585px; left: 182px; }
 
 /* ==========================================
-   BARRAS LATERALES: BARRA R1 (MOVIDA 20px A LA DERECHA)
+   BARRAS LATERALES: BARRA R1 (MOVIDA +20px A LA DERECHA)
    ========================================== */
 .mr1 {
     top: 150px;
-    left: 225px; 
+    left: 245px; /* De 225px pasa a 245px */
     width: 25px;
     height: 95px;
 }
-.s32 { top: 150px; left: 255px; } 
-.s33 { top: 175px; left: 255px; }
-.s34 { top: 200px; left: 255px; }
-.s35 { top: 225px; left: 255px; }
-.s36 { top: 250px; left: 228px; } 
-.s40 { top: 150px; left: 202px; } 
-.s39 { top: 175px; left: 202px; }
-.s38 { top: 200px; left: 202px; }
-.s37 { top: 225px; left: 202px; }
+
+/* LADO DERECHO (Sillas 32 al 35) */
+.s32 { top: 150px; left: 275px; } /* De 255px pasa a 275px */
+.s33 { top: 175px; left: 275px; }
+.s34 { top: 200px; left: 275px; }
+.s35 { top: 225px; left: 275px; }
+
+/* LADO INFERIOR (Silla 36 centrada abajo) */
+.s36 { top: 250px; left: 248px; } /* De 228px pasa a 248px */
+
+/* LADO IZQUIERDO (Sillas 40 al 37) */
+.s40 { top: 150px; left: 222px; } /* De 202px pasa a 222px */
+.s39 { top: 175px; left: 222px; }
+.s38 { top: 200px; left: 222px; }
+.s37 { top: 225px; left: 222px; }
 
 /* ==========================================
    MESAS BIS: FILA HORIZONTAL (BIS1 -> BIS2 -> BIS3)
