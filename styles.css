@@ -143,6 +143,48 @@ body {
 }
 
 /* ==========================================
+   ESTILO BASE PARA LOS MUROS PERIMETRALES
+   ========================================== */
+.muro-p {
+    position: absolute;
+    background-color: #cbd5e1; /* Gris sutil de la propuesta */
+    border-radius: 2px;
+    z-index: 5; /* Detrás de las sillas y mesas */
+}
+
+/* --- MUROS SUPERIORES --- */
+/* Línea horizontal arriba de R2 (izq del escenario) */
+.ms-izq { top: 45px; left: 0; width: 80px; height: 4px; }
+/* Línea horizontal arriba de las Bis (der del escenario) */
+.ms-der { top: 45px; left: 300px; width: 280px; height: 4px; }
+
+/* --- MUROS ZONA R2 Y R3 (IZQUIERDA) --- */
+/* Línea vertical a la izquierda de R2 */
+.ml-r2-izq { top: 45px; left: 0; width: 4px; height: 155px; }
+/* Quiebre horizontal abajo de R2 */
+.ml-r2-bajo { top: 200px; left: 0; width: 75px; height: 4px; }
+/* Muro rojo corto divisorio entre R3 y M6/M7 */
+.ml-m6-separador { top: 275px; left: 75px; width: 4px; height: 25px; }
+/* Quiebre horizontal abajo de R3 (arriba de silla 70) */
+.ml-r3-bajo { top: 490px; left: 0; width: 100px; height: 4px; }
+
+/* --- MUROS INFERIORES (ZONA B2) --- */
+/* Línea vertical que baja por todo el extremo izquierdo de B2 */
+.mi-b2-izq { top: 490px; left: 0; width: 4px; height: 140px; }
+/* Línea de fondo del establecimiento (abajo de B2 y pasillo) */
+.mi-b2-fondo { top: 630px; left: 0; width: 215px; height: 4px; }
+
+/* --- MUROS COSTADO DERECHO Y ACCESO --- */
+/* Techo horizontal abajo de Bis4/Bis5 */
+.md-bis4-bajo { top: 220px; left: 300px; width: 280px; height: 4px; }
+/* Línea vertical pegada a las sillas derechas de R1 */
+.md-r1-der { top: 220px; left: 300px; width: 4px; height: 115px; }
+/* Pared larga que corre a la derecha de la escalera hasta la entrada */
+.md-escalera-der { top: 335px; left: 300px; width: 4px; height: 210px; }
+/* Muro rojo vertical que abraza a la mesa B1 (atrás de las sillas 84-87) */
+.md-b1-izq { top: 490px; left: 232px; width: 4px; height: 140px; }
+
+/* ==========================================
    ZONA 1: AJUSTES FRONTALES Y NUMERACIÓN
    ========================================== */
 
